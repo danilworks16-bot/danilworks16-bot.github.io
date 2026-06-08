@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Семенюк Данил — специалист по международным продажам, ВЭД и B2B-сопровождению. Шанхай, Китай.">
+<title>Семенюк Данил · ВЭД · Международные продажи · Китай</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+/* ====================================================
+   CSS VARIABLES — edit palette and typography here
+   ==================================================== */
+:root {
+  --navy:        #0D1627;
+  --navy-mid:    #182438;
+  --navy-deep:   #080F1C;
+  --gold:        #B8965A;
+  --gold-light:  #D4AF73;
+  --gold-pale:   #EEE0C2;
+  --surface:     #F5F3EF;
+  --surface-alt: #EDE9E1;
+  --white:       #FFFFFF;
+  --text:        #0D1627;
+  --text-sec:    #4B5265;
+  --text-muted:  #8A90A3;
+  --border:      #E0DBD3;
+  --shadow-sm:   0 2px 12px rgba(13,22,39,.07);
+  --shadow-md:   0 8px 32px rgba(13,22,39,.12);
+  --shadow-lg:   0 20px 60px rgba(13,22,39,.18);
+
+  --ff-display:  'Cormorant Garamond', Georgia, serif;
+  --ff-body:     'DM Sans', system-ui, sans-serif;
+  --ff-cn:       'Noto Serif SC', serif;
+}
+
+/* ====================================================
+   RESET & BASE
+   ==================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--ff-body);
+  color: var(--text);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+a { text-decoration: none; }
+ul { list-style: none; }
+img { display: block; width: 100%; }
+
+/* ====================================================
+   UTILITY CLASSES
+   ==================================================== */
+.section { padding: 6.5rem 3rem; }
+.inner { max-width: 1280px; margin: 0 auto; }
+
+.sec-label {
+  font-family: var(--ff-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .75rem;
+}
+.sec-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold-pale);
+  max-width: 48px;
+}
+
+.sec-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+
+.sec-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.25rem 0 2.75rem;
+}
+
+/* ====================================================
+   SCROLL REVEAL
+   ==================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+.reveal.delay-1 { transition-delay: .1s; }
+.reveal.delay-2 { transition-delay: .2s; }
+.reveal.delay-3 { transition-delay: .3s; }
+
+/* ====================================================
+   NAVIGATION
+   ==================================================== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 1.2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background .35s, backdrop-filter .35s;
+}
+nav.solid {
+  background: rgba(13,22,39,.93);
+  backdrop-filter: blur(18px);
+}
+.nav-brand {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.85);
+  letter-spacing: .04em;
+}
+.nav-links {
+  display: flex;
+  gap: 2.25rem;
+}
+.nav-links a {
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--gold-light); }
+
+/* ====================================================
+   HERO
+   ==================================================== */
+.hero {
+  min-height: 100vh;
+  background: var(--navy);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Fine grid texture */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(184,150,90,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,150,90,.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+/* Warm glow top-right */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -5%;
+  width: 55%;
+  height: 75%;
+  background: radial-gradient(ellipse, rgba(184,150,90,.1) 0%, transparent 68%);
+  pointer-events: none;
+}
+
+.hero-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 9rem 3rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* — Left column — */
+.hero-left {}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  background: rgba(184,150,90,.12);
+  border: 1px solid rgba(184,150,90,.28);
+  color: var(--gold-light);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: .4rem 1rem;
+  margin-bottom: 2rem;
+  animation: slideUp .8s ease both;
+}
+.hero-tag i {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* === ЗАМЕНИ ИМЯ ЗДЕСЬ === */
+.hero-name {
+  font-family: var(--ff-display);
+  font-size: clamp(3.8rem, 7vw, 6.4rem);
+  font-weight: 700;
+  line-height: .92;
+  letter-spacing: -.03em;
+  color: var(--white);
+  animation: slideUp .8s .1s ease both;
+  margin-bottom: .55rem;
+}
+
+/* === ЗАМЕНИ КИТАЙСКОЕ ИМЯ ЗДЕСЬ === */
+.hero-cn {
+  font-family: var(--ff-cn);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 300;
+  color: var(--gold);
+  letter-spacing: .18em;
+  display: block;
+  margin-bottom: 1.75rem;
+  animation: slideUp .8s .18s ease both;
+}
+
+.hero-role {
+  font-size: .88rem;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 1.6rem;
+  animation: slideUp .8s .25s ease both;
+}
+.hero-role span { color: var(--gold-light); }
+
+/* === ЗАМЕНИ SUMMARY ЗДЕСЬ === */
+.hero-summary {
+  font-size: 1.02rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255,255,255,.68);
+  max-width: 500px;
+  margin-bottom: 2.75rem;
+  animation: slideUp .8s .32s ease both;
+}
+
+/* CTA row — ЗАМЕНИ ССЫЛКИ В КНОПКАХ ЗДЕСЬ */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  animation: slideUp .8s .4s ease both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-family: var(--ff-body);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: .8rem 1.6rem;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s, background .2s, color .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  box-shadow: 0 8px 24px rgba(184,150,90,.35);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: rgba(255,255,255,.72);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+  background: rgba(184,150,90,.07);
+}
+
+/* — Right column — */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  animation: slideUp .8s .28s ease both;
+}
+
+.glass-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  backdrop-filter: blur(12px);
+  padding: 1.8rem;
+}
+
+.glass-card-title {
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
+/* ЗАМЕНИ КОНТАКТЫ В HERO ЗДЕСЬ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+.c-item { display: flex; flex-direction: column; gap: .18rem; }
+.c-label {
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+}
+.c-val {
+  font-size: .88rem;
+  color: rgba(255,255,255,.8);
+  font-weight: 400;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,.05);
+}
+.h-stat {
+  background: rgba(255,255,255,.02);
+  padding: 1.3rem 1rem;
+  text-align: center;
+}
+.h-stat-n {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: .25rem;
+}
+.h-stat-l {
+  font-size: .6rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.35);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* ЗАМЕНИ ЯЗЫКИ В HERO ЗДЕСЬ */
+.lang-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+.chip {
+  font-size: .68rem;
+  font-weight: 500;
+  padding: .32rem .75rem;
+  border: 1px solid rgba(255,255,255,.1);
+  color: rgba(255,255,255,.62);
+  background: rgba(255,255,255,.05);
+  transition: border-color .2s;
+}
+.chip.gold {
+  border-color: rgba(184,150,90,.35);
+  color: var(--gold-light);
+  background: rgba(184,150,90,.1);
+}
+
+/* ====================================================
+   ABOUT
+   ==================================================== */
+.about { background: var(--white); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 5.5rem;
+  align-items: start;
+}
+
+/* Photo block — ЗАМЕНИ ФОТО: удали .photo-slot, добавь <img class="about-img" src="your.jpg"> */
+.photo-slot {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.photo-slot::after {
+  content: 'ФОТО';
+  font-size: .62rem;
+  letter-spacing: .22em;
+  color: rgba(255,255,255,.18);
+  font-weight: 700;
+}
+.photo-slot .corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--gold);
+  border-style: solid;
+  opacity: .55;
+}
+.photo-slot .corner.tl { top: 12px; left: 12px; border-width: 2px 0 0 2px; }
+.photo-slot .corner.br { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; }
+.about-img { aspect-ratio: 3/4; object-fit: cover; }
+
+.about-meta { display: flex; flex-direction: column; gap: .85rem; }
+.meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: .18rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--border);
+}
+.meta-row:last-child { border-bottom: none; }
+.meta-label {
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.meta-val {
+  font-size: .9rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.about-right {}
+
+/* ЗАМЕНИ ЦИТАТУ ЗДЕСЬ */
+.pull-quote {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--navy);
+  border-left: 2.5px solid var(--gold);
+  padding-left: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+/* ЗАМЕНИ ТЕКСТ ПРОФИЛЯ ЗДЕСЬ */
+.about-text {
+  font-size: .97rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-sec);
+  margin-bottom: 1.5rem;
+}
+.about-text strong { color: var(--text); font-weight: 600; }
+
+.mini-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.mm-item {
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.mm-item:last-child { border-right: none; }
+.mm-n {
+  font-family: var(--ff-display);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.mm-l {
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-muted);
+  margin-top: .25rem;
+  font-weight: 500;
+}
+
+/* ====================================================
+   COMPETENCIES
+   ==================================================== */
+.competencies { background: var(--surface); }
+
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 2.75rem;
+}
+.comp-card {
+  background: var(--white);
+  padding: 1.9rem 1.7rem;
+  transition: background .25s, transform .25s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.comp-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width .3s ease;
+}
+.comp-card:hover { background: var(--navy); }
+.comp-card:hover::after { width: 100%; }
+.comp-card:hover .comp-icon { color: var(--gold); }
+.comp-card:hover .comp-name { color: var(--white); }
+.comp-card:hover .comp-desc { color: rgba(255,255,255,.48); }
+
+.comp-icon {
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+  transition: color .25s;
+  line-height: 1;
+  font-style: normal;
+}
+.comp-name {
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .45rem;
+  letter-spacing: .01em;
+  transition: color .25s;
+}
+.comp-desc {
+  font-size: .76rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.55;
+  transition: color .25s;
+}
+
+/* ====================================================
+   EXPERIENCE
+   ==================================================== */
+.experience { background: var(--white); }
+
+.exp-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 5rem;
+  margin-top: 2.75rem;
+}
+
+.exp-nav { position: sticky; top: 6rem; height: fit-content; }
+.exp-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.exp-nav-item:hover { opacity: .75; }
+.exp-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+  transition: background .2s, box-shadow .2s;
+}
+.exp-nav-item.active .exp-dot {
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(184,150,90,.2);
+}
+.exp-nav-co { font-size: .84rem; font-weight: 600; color: var(--text); margin-bottom: .15rem; }
+.exp-nav-yr { font-size: .68rem; letter-spacing: .07em; color: var(--text-muted); }
+
+.exp-items { display: flex; flex-direction: column; gap: 3.5rem; }
+
+.exp-item {
+  padding-left: 2.5rem;
+  border-left: 2px solid var(--border);
+  position: relative;
+}
+.exp-item::before {
+  content: '';
+  position: absolute;
+  left: -7px; top: 4px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+/* ЗАМЕНИ ДАННЫЕ ОБ ОПЫТЕ ЗДЕСЬ */
+.exp-period {
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .5rem;
+}
+.exp-co {
+  font-family: var(--ff-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: .3rem;
+}
+.exp-role {
+  font-size: .88rem;
+  color: var(--text-sec);
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  letter-spacing: .01em;
+}
+.exp-lead {
+  font-size: .95rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-sec);
+  margin-bottom: 1.5rem;
+}
+.exp-list { display: flex; flex-direction: column; gap: .72rem; }
+.exp-list li {
+  display: flex;
+  gap: .7rem;
+  font-size: .87rem;
+  font-weight: 300;
+  line-height: 1.62;
+  color: var(--text-sec);
+}
+.exp-list li::before {
+  content: '→';
+  color: var(--gold);
+  flex-shrink: 0;
+  font-size: .78rem;
+  margin-top: .15rem;
+}
+.exp-list li strong { color: var(--text); font-weight: 600; }
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .38rem;
+  margin-top: 1.5rem;
+}
+.exp-tag {
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--text-muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: .28rem .65rem;
+  transition: border-color .2s, color .2s;
+}
+.exp-tag:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ====================================================
+   ACHIEVEMENTS
+   ==================================================== */
+.achievements { background: var(--navy); }
+
+.ach-head {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+.ach-head .sec-label { justify-content: center; }
+.ach-head .sec-label::after { display: none; }
+.ach-head .sec-title { color: var(--white); }
+
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,.055);
+}
+.ach-card {
+  background: var(--navy);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: background .3s;
+  position: relative;
+  overflow: hidden;
+}
+.ach-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width .3s;
+}
+.ach-card:hover { background: var(--navy-mid); }
+.ach-card:hover::after { width: 48px; }
+
+/* ЗАМЕНИ ЦИФРЫ ЗДЕСЬ */
+.ach-n {
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: .7rem;
+  letter-spacing: -.02em;
+}
+.ach-l {
+  font-size: .72rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.45);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  line-height: 1.45;
+}
+.ach-row2 { margin-top: 1px; }
+
+/* ====================================================
+   EDUCATION
+   ==================================================== */
+.education { background: var(--surface); }
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.75rem;
+}
+
+.edu-card {
+  background: var(--white);
+  border-top: 3px solid var(--gold);
+  padding: 2.4rem;
+}
+.edu-card.dark {
+  background: var(--navy);
+  border-top-color: var(--gold);
+}
+.edu-card.accent {
+  background: var(--gold);
+  border-top-color: var(--navy);
+}
+
+/* ЗАМЕНИ ДАННЫЕ ОБ ОБРАЗОВАНИИ ЗДЕСЬ */
+.edu-uni {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: .25rem;
+  line-height: 1.2;
+}
+.edu-loc {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.edu-degree {
+  font-size: .98rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .2rem;
+}
+.edu-field {
+  font-size: .88rem;
+  font-weight: 300;
+  color: var(--text-sec);
+  margin-bottom: 1.5rem;
+}
+.edu-list { display: flex; flex-direction: column; gap: .5rem; }
+.edu-list li {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: .84rem;
+  color: var(--text-sec);
+  font-weight: 300;
+}
+.edu-list li::before {
+  content: '';
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.edu-side { display: flex; flex-direction: column; gap: 1.5rem; }
+.edu-side-card {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.edu-side-card.dark { background: var(--navy); }
+.edu-side-card.gold { background: var(--gold); }
+.edu-side-title {
+  font-family: var(--ff-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: .3rem;
+}
+.edu-side-card.dark .edu-side-title { color: var(--white); }
+.edu-side-card.gold .edu-side-title { color: var(--navy); }
+.edu-side-sub {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .8rem;
+}
+.edu-side-card.dark .edu-side-sub { color: rgba(255,255,255,.4); }
+.edu-side-card.gold .edu-side-sub { color: rgba(13,22,39,.5); }
+.edu-side-body {
+  font-size: .85rem;
+  font-weight: 300;
+  line-height: 1.65;
+}
+.edu-side-card.dark .edu-side-body { color: rgba(255,255,255,.5); }
+.edu-side-card.gold .edu-side-body { color: rgba(13,22,39,.65); }
+
+/* ====================================================
+   LANGUAGES
+   ==================================================== */
+.languages { background: var(--white); }
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.75rem;
+}
+.lang-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: box-shadow .25s, transform .25s;
+  position: relative;
+}
+.lang-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.lang-ring {
+  width: 76px; height: 76px;
+  margin: 0 auto 1.2rem;
+}
+.ring-svg { transform: rotate(-90deg); display: block; }
+.ring-bg { fill: none; stroke: var(--border); stroke-width: 5; }
+.ring-fg {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 207;
+}
+.lang-pct {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--ff-display);
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.lang-ring-wrap { position: relative; width: 76px; height: 76px; margin: 0 auto 1.2rem; }
+.lang-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: .3rem;
+}
+.lang-level {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .45rem;
+}
+.lang-desc {
+  font-size: .76rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ====================================================
+   CONTACT / CTA
+   ==================================================== */
+.contact { background: var(--navy); }
+
+.contact-grid-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5.5rem;
+  align-items: start;
+}
+
+.contact-left .sec-label { color: var(--gold); }
+.contact-left .sec-title { color: var(--white); }
+.contact-sub {
+  font-size: .97rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 2.5rem;
+  max-width: 440px;
+}
+.cta-row { display: flex; flex-wrap: wrap; gap: .65rem; }
+
+.contact-right { display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* ЗАМЕНИ КОНТАКТЫ ЗДЕСЬ */
+.c-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,.055);
+}
+.c-info-item {
+  background: rgba(255,255,255,.02);
+  padding: 1.5rem;
+}
+.c-info-label {
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .4rem;
+}
+.c-info-val {
+  font-size: .92rem;
+  color: rgba(255,255,255,.78);
+}
+.c-info-val a {
+  color: rgba(255,255,255,.78);
+  text-decoration: none;
+  transition: color .2s;
+}
+.c-info-val a:hover { color: var(--gold-light); }
+
+/* ЗАМЕНИ WECHAT QR-КОД ЗДЕСЬ: удали .wechat-note и добавь <img src="wechat-qr.png"> */
+.wechat-note {
+  padding: 1.2rem 1.5rem;
+  border: 1px dashed rgba(184,150,90,.3);
+  font-size: .78rem;
+  color: rgba(255,255,255,.3);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ====================================================
+   FOOTER
+   ==================================================== */
+footer {
+  background: var(--navy-deep);
+  padding: 2rem 3rem;
+}
+.foot-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot-brand {
+  font-family: var(--ff-display);
+  font-size: .95rem;
+  font-style: italic;
+  color: rgba(255,255,255,.25);
+}
+.foot-copy {
+  font-size: .68rem;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.18);
+}
+
+/* ====================================================
+   ANIMATIONS
+   ==================================================== */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ====================================================
+   PRINT
+   ==================================================== */
+@media print {
+  nav, .hero-cta, .cta-row { display: none !important; }
+  .hero { min-height: auto; page-break-after: always; }
+  .section { padding: 2.5rem 2rem; page-break-inside: avoid; }
+  * { animation: none !important; transition: none !important; }
+  .hero::before, .hero::after { display: none; }
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1100px) {
+  .comp-grid { grid-template-columns: repeat(3, 1fr); }
+  .ach-grid  { grid-template-columns: repeat(3, 1fr); }
+  .lang-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .section { padding: 4rem 1.75rem; }
+  nav { padding: 1rem 1.75rem; }
+  .nav-links { display: none; }
+  .hero-wrap {
+    grid-template-columns: 1fr;
+    padding: 7.5rem 1.75rem 4.5rem;
+  }
+  .hero-right { display: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-left { display: none; }
+  .exp-layout { grid-template-columns: 1fr; }
+  .exp-nav { position: static; display: flex; overflow-x: auto; padding-bottom: .75rem; gap: 1rem; }
+  .exp-nav-item { border-bottom: none; border: 1px solid var(--border); padding: .75rem 1rem; white-space: nowrap; }
+  .edu-grid, .contact-grid-wrap { grid-template-columns: 1fr; }
+  .c-info-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .comp-grid { grid-template-columns: repeat(2, 1fr); }
+  .ach-grid  { grid-template-columns: repeat(2, 1fr); }
+  .mini-metrics { grid-template-columns: 1fr; }
+  .mini-metrics .mm-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .mini-metrics .mm-item:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====================================================
+     NAVIGATION
+     ==================================================== -->
+<nav id="nav">
+  <!-- ЗАМЕНИ ЛОГОТИП ЗДЕСЬ -->
+  <div class="nav-brand">SD · 丹尼尔</div>
+  <ul class="nav-links">
+    <li><a href="#about">Профиль</a></li>
+    <li><a href="#competencies">Компетенции</a></li>
+    <li><a href="#experience">Опыт</a></li>
+    <li><a href="#achievements">Результаты</a></li>
+    <li><a href="#contact">Контакт</a></li>
+  </ul>
+</nav>
+
+<!-- ====================================================
+     HERO
+     ==================================================== -->
+<section class="hero" id="top">
+  <div class="hero-wrap">
+
+    <div class="hero-left">
+      <div class="hero-tag"><i></i>International Trade · VED Specialist</div>
+
+      <!-- ====== ЗАМЕНИ ИМЯ ЗДЕСЬ ====== -->
+      <h1 class="hero-name">СЕМЕНЮК<br>ДАНИЛ</h1>
+      <span class="hero-cn">丹尼尔</span>
+
+      <!-- ====== ЗАМЕНИ РОЛЬ ЗДЕСЬ ====== -->
+      <p class="hero-role">Международные продажи · ВЭД · <span>Китай — Россия — СНГ</span></p>
+
+      <!-- ====== ЗАМЕНИ SUMMARY ЗДЕСЬ ====== -->
+      <p class="hero-summary">
+        Специалист по международным сделкам и B2B-продажам с базой в Шанхае.
+        Веду полный цикл от запроса до отгрузки, работаю с китайскими производителями
+        и клиентами из России, СНГ и зарубежных рынков.
+      </p>
+
+      <!-- ====== ЗАМЕНИ ССЫЛКИ В КНОПКАХ ЗДЕСЬ ====== -->
+      <div class="hero-cta">
+        <a href="#" class="btn btn-gold" onclick="alert('Добавьте ссылку на PDF-резюме')">↓ Скачать CV</a>
+        <a href="mailto:danil_semenyuk@mail.ru" class="btn btn-ghost">✉ Написать</a>
+        <a href="https://t.me/shanghaimanager" class="btn btn-ghost">Telegram</a>
+        <a href="#experience" class="btn btn-ghost">Опыт →</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+
+      <!-- ====== ЗАМЕНИ КОНТАКТЫ В HERO ЗДЕСЬ ====== -->
+      <div class="glass-card">
+        <div class="glass-card-title">Контакты</div>
+        <div class="contact-grid">
+          <div class="c-item">
+            <span class="c-label">Email</span>
+            <span class="c-val">danil_semenyuk@mail.ru</span>
+          </div>
+          <div class="c-item">
+            <span class="c-label">Телефон</span>
+            <span class="c-val">+86 198 2183 3439</span>
+          </div>
+          <div class="c-item">
+            <span class="c-label">WeChat</span>
+            <span class="c-val">eluosinanzi</span>
+          </div>
+          <div class="c-item">
+            <span class="c-label">Telegram</span>
+            <span class="c-val">@shanghaimanager</span>
+          </div>
+          <div class="c-item">
+            <span class="c-label">Локация</span>
+            <span class="c-val">Шанхай, Китай</span>
+          </div>
+          <div class="c-item">
+            <span class="c-label">Рынки</span>
+            <span class="c-val">CN · RU · CIS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="h-stat">
+          <div class="h-stat-n">3+</div>
+          <div class="h-stat-l">млн RMB закупок</div>
+        </div>
+        <div class="h-stat">
+          <div class="h-stat-n">95%</div>
+          <div class="h-stat-l">своевременно</div>
+        </div>
+        <div class="h-stat">
+          <div class="h-stat-n">100+</div>
+          <div class="h-stat-l">поставщиков</div>
+        </div>
+      </div>
+
+      <!-- ====== ЗАМЕНИ ЯЗЫКИ ЗДЕСЬ ====== -->
+      <div class="glass-card">
+        <div class="glass-card-title">Языки</div>
+        <div class="lang-chips">
+          <span class="chip gold">Русский — Родной</span>
+          <span class="chip gold">中文 — HSK 6</span>
+          <span class="chip">English — B2</span>
+          <span class="chip">한국어 — A2</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     ABOUT
+     ==================================================== -->
+<section class="section about" id="about">
+  <div class="inner">
+    <div class="about-grid">
+
+      <div class="about-left reveal">
+        <!-- ====== ЗАМЕНИ ФОТО: удали .photo-slot и вставь <img class="about-img" src="your.jpg" alt="Семенюк Данил"> ====== -->
+        <div class="photo-slot">
+          <div class="corner tl"></div>
+          <div class="corner br"></div>
+        </div>
+
+        <!-- ====== ЗАМЕНИ ДАННЫЕ ЗДЕСЬ ====== -->
+        <div class="about-meta">
+          <div class="meta-row">
+            <span class="meta-label">Имя</span>
+            <span class="meta-val">Семенюк Данил</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Локация</span>
+            <span class="meta-val">Шанхай, Китай 🇨🇳</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Специализация</span>
+            <span class="meta-val">ВЭД · Международные продажи</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Ключевые рынки</span>
+            <span class="meta-val">Китай · Россия · СНГ</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Опыт</span>
+            <span class="meta-val">3+ года в B2B и ВЭД</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right reveal delay-1">
+        <div class="sec-label">Профессиональный профиль</div>
+        <h2 class="sec-title">Международный специалист<br>по продажам и ВЭД</h2>
+        <div class="sec-divider"></div>
+
+        <!-- ====== ЗАМЕНИ ЦИТАТУ ЗДЕСЬ ====== -->
+        <blockquote class="pull-quote">
+          «Работаю на стыке двух рынков — закрываю международные сделки там,
+          где нужны знание китайской специфики, русскоязычная коммуникация
+          и умение находить решение под давлением сроков.»
+        </blockquote>
+
+        <!-- ====== ЗАМЕНИ ТЕКСТ ЗДЕСЬ ====== -->
+        <p class="about-text">
+          Специалист по международным продажам и ВЭД с практическим опытом в
+          <strong>B2B-сделках, поиске поставщиков, экспортной координации и сопровождении
+          международных проектов</strong>. Работаю на пересечении китайского и российского
+          рынков, где критически важны не только знание языков, но и понимание деловой
+          культуры, производственной специфики и логики переговоров.
+        </p>
+        <p class="about-text">
+          Хорошо понимаю специфику <strong>китайского производственного рынка</strong>: как
+          выбирать и верифицировать фабрики, как вести ценовые переговоры с производителями,
+          как контролировать сроки и качество на всех этапах. При этом чётко понимаю
+          потребности <strong>клиентов из России и стран СНГ</strong> — бюджетные ограничения,
+          логистические риски, требования к документации.
+        </p>
+        <p class="about-text">
+          Работал с проектами в сферах <strong>промышленного оборудования, инженерной техники,
+          химического сырья и технической продукции</strong>. Быстро вникаю в логику продукта
+          и технические требования — умею говорить на одном языке и с инженером,
+          и с коммерческим директором.
+        </p>
+
+        <div class="mini-metrics">
+          <div class="mm-item">
+            <div class="mm-n">25–30</div>
+            <div class="mm-l">заказов одновременно</div>
+          </div>
+          <div class="mm-item">
+            <div class="mm-n">3+</div>
+            <div class="mm-l">лет в ВЭД и B2B</div>
+          </div>
+          <div class="mm-item">
+            <div class="mm-n">3</div>
+            <div class="mm-l">рабочих языка</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     COMPETENCIES
+     ==================================================== -->
+<section class="section competencies" id="competencies">
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">Ключевые компетенции</div>
+      <h2 class="sec-title">Что я умею делать</h2>
+      <div class="sec-divider"></div>
+    </div>
+
+    <!-- ====== ЗАМЕНИ КОМПЕТЕНЦИИ ЗДЕСЬ ====== -->
+    <div class="comp-grid reveal">
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">ВЭД и международные сделки</div>
+        <div class="comp-desc">Полный цикл: от запроса до финальной отгрузки. Incoterms 2020, экспортная документация, условия поставки.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">B2B Продажи</div>
+        <div class="comp-desc">Работа с промышленными и корпоративными клиентами. Выявление потребностей, коммерческие предложения, сопровождение до закрытия.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Поиск и верификация поставщиков</div>
+        <div class="comp-desc">База 100+ производителей Китая. Оценка надёжности фабрик, сравнительный анализ по цене, срокам и качеству.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Переговоры с китайскими фабриками</div>
+        <div class="comp-desc">Цена, MOQ, сроки, упаковка, технические характеристики — переговоры напрямую с производителями на китайском.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Экспортная координация</div>
+        <div class="comp-desc">Контроль производства, подготовка отгрузки, взаимодействие с экспедиторами и логистическими операторами.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Международная логистика</div>
+        <div class="comp-desc">Организация поставок из Китая. Морской, ж/д и авиафрейт. Взаимодействие с таможенными брокерами.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Россия · СНГ · Международные клиенты</div>
+        <div class="comp-desc">Понимание потребностей рынка. Учёт специфики: бюджетные ограничения, логистика, документация.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">CRM · ERP · Marketplace Tools</div>
+        <div class="comp-desc">Alibaba Int'l, Made-in-China, Global Sources, LinkedIn. CRM и ERP для ведения клиентской базы и управления заказами.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Multilingual Communication</div>
+        <div class="comp-desc">Русский · 中文 · English. Устраняю языковой барьер между российскими заказчиками и китайскими производителями.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Участие в отраслевых выставках</div>
+        <div class="comp-desc">Представление компании на международных выставках в Шанхае. Переговоры, развитие бизнес-возможностей.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">Управление заказами</div>
+        <div class="comp-desc">25–30 активных заказов одновременно. Контроль сроков, координация между производством, логистикой и клиентом.</div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">◈</div>
+        <div class="comp-name">B2B-маркетинг и коммуникации</div>
+        <div class="comp-desc">Digital-продвижение, контент для B2B-продаж, поддержка лидогенерации на международных рынках.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     EXPERIENCE
+     ==================================================== -->
+<section class="section experience" id="experience">
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">Опыт работы</div>
+      <h2 class="sec-title">Профессиональный путь</h2>
+      <div class="sec-divider"></div>
+    </div>
+
+    <div class="exp-layout">
+      <nav class="exp-nav reveal">
+        <a class="exp-nav-item active" href="#exp1">
+          <div class="exp-dot"></div>
+          <div>
+            <div class="exp-nav-co">Shanghai KESA</div>
+            <div class="exp-nav-yr">2025 — 2026</div>
+          </div>
+        </a>
+        <a class="exp-nav-item" href="#exp2">
+          <div class="exp-dot"></div>
+          <div>
+            <div class="exp-nav-co">Composite Group</div>
+            <div class="exp-nav-yr">2023 — 2025</div>
+          </div>
+        </a>
+      </nav>
+
+      <div class="exp-items reveal delay-1">
+
+        <!-- ====== ЗАМЕНИ ОПЫТ 1 ЗДЕСЬ ====== -->
+        <div class="exp-item" id="exp1">
+          <div class="exp-period">2025 — 2026</div>
+          <div class="exp-co">Shanghai KESA</div>
+          <div class="exp-role">Менеджер по международным продажам и ВЭД · Шанхай, Китай</div>
+          <p class="exp-lead">
+            Полный цикл международных B2B-сделок в сфере промышленного оборудования,
+            инженерной техники, химического сырья и технической продукции. Работа
+            связующим звеном между российскими заказчиками и китайскими производителями.
+          </p>
+          <ul class="exp-list">
+            <li>Управлял <strong>полным циклом международных сделок</strong>: от обработки входящих запросов и подготовки КП до запуска производства, организации логистики и финальной отгрузки — ежемесячно <strong>25–30 активных заказов</strong> одновременно</li>
+            <li>Анализировал потребности клиентов из <strong>России, СНГ и зарубежных рынков</strong>, прорабатывал технические требования, бюджет, сроки и условия Incoterms 2020 — сокращал цикл согласования сделки</li>
+            <li>Вёл <strong>коммерческие переговоры с китайскими производителями</strong> по цене, срокам, MOQ, упаковке и технических характеристикам — добивался оптимальных условий для клиентов</li>
+            <li>Разработал и поддерживал <strong>базу 100+ китайских производителей</strong> промышленной продукции — подбор оптимальных партнёров под требования конкретных проектов</li>
+            <li>Координировал экспортные поставки и международную логистику — <strong>95%+ своевременного исполнения</strong> обязательств по сопровождаемым заказам</li>
+            <li>Реализовывал проекты с <strong>совокупным объёмом закупок свыше 3 млн RMB</strong>: промышленное оборудование, инженерная техника, химическое сырьё, техническая продукция</li>
+            <li>Успешно реализовал проект по <strong>смене поставщика для российского заказчика</strong> — предотвратил срыв поставки и риск потери контракта</li>
+            <li>Представлял компанию на <strong>международных отраслевых выставках</strong> в Шанхае: переговоры, сопровождение клиентов, развитие коммерческих возможностей</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Alibaba International</span>
+            <span class="exp-tag">Made-in-China</span>
+            <span class="exp-tag">Global Sources</span>
+            <span class="exp-tag">LinkedIn</span>
+            <span class="exp-tag">CRM</span>
+            <span class="exp-tag">ERP</span>
+            <span class="exp-tag">Incoterms 2020</span>
+            <span class="exp-tag">Supplier Sourcing</span>
+          </div>
+        </div>
+
+        <!-- ====== ЗАМЕНИ ОПЫТ 2 ЗДЕСЬ ====== -->
+        <div class="exp-item" id="exp2">
+          <div class="exp-period">2023 — 2025</div>
+          <div class="exp-co">Composite Group</div>
+          <div class="exp-role">SMM Manager · Россия (удалённо)</div>
+          <p class="exp-lead">
+            B2B-продвижение в сфере промышленных композитных материалов на российском и
+            международном рынках. Digital-маркетинг, контент-стратегия и поддержка продаж
+            для корпоративных клиентов из России, СНГ, Европы и Северной Америки.
+          </p>
+          <ul class="exp-list">
+            <li>Реализовывал маркетинговые кампании в цифровых каналах — рост <strong>среднемесячной посещаемости на 35%</strong>. Суммарный охват брендового контента — <strong>100 000+ просмотров</strong></li>
+            <li>Разрабатывал продуктовые презентации и коммерческие материалы — <strong>50+ маркетинговых и продуктовых материалов</strong> для отдела продаж</li>
+            <li>Участвовал в реализации стратегии международного продвижения и организации <strong>10+ отраслевых мероприятий</strong> (онлайн и офлайн)</li>
+            <li>Формировал потенциальных клиентов через цифровые каналы: <strong>200+ квалифицированных лидов</strong>, из которых <strong>30+ перешли в стадию коммерческих переговоров</strong></li>
+            <li>Обеспечил совокупный охват потенциальных клиентов из России, СНГ, Европы и Северной Америки — <strong>5 000+ контактов</strong></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Digital Marketing</span>
+            <span class="exp-tag">Content Strategy</span>
+            <span class="exp-tag">B2B Lead Gen</span>
+            <span class="exp-tag">Brand Communications</span>
+            <span class="exp-tag">Social Media</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     ACHIEVEMENTS
+     ==================================================== -->
+<section class="section achievements" id="achievements">
+  <div class="inner">
+
+    <div class="ach-head reveal">
+      <div class="sec-label">Доказательства результата</div>
+      <h2 class="sec-title">Ключевые показатели</h2>
+    </div>
+
+    <!-- ====== ЗАМЕНИ ЦИФРЫ ЗДЕСЬ ====== -->
+    <div class="ach-grid reveal">
+      <div class="ach-card">
+        <div class="ach-n">3+</div>
+        <div class="ach-l">млн RMB объём закупок</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">95%+</div>
+        <div class="ach-l">Своевременное исполнение заказов</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">100+</div>
+        <div class="ach-l">Китайских производителей в базе</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">25–30</div>
+        <div class="ach-l">Активных заказов ежемесячно</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">5K+</div>
+        <div class="ach-l">Контактов в базе клиентов</div>
+      </div>
+    </div>
+
+    <div class="ach-grid ach-row2 reveal delay-1">
+      <div class="ach-card">
+        <div class="ach-n">200+</div>
+        <div class="ach-l">Квалифицированных лидов</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">30+</div>
+        <div class="ach-l">Лидов вышли на переговоры</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">50+</div>
+        <div class="ach-l">Маркетинговых материалов</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">100K+</div>
+        <div class="ach-l">Просмотров контента</div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-n">10+</div>
+        <div class="ach-l">Выставок и мероприятий</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================
+     EDUCATION
+     ==================================================== -->
+<section class="section education" id="education">
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">Образование</div>
+      <h2 class="sec-title">Академический бэкграунд</h2>
+      <div class="sec-divider"></div>
+    </div>
+
+    <div class="edu-grid reveal">
+      <!-- ====== ЗАМЕНИ ДАННЫЕ ОБ ОБРАЗОВАНИИ ЗДЕСЬ ====== -->
+      <div class="edu-card">
+        <div class="edu-uni">East China University of Political Science and Law</div>
+        <div class="edu-loc">Шанхай, Китай · 2020 — 2025</div>
+        <div class="edu-degree">Бакалавр</div>
+        <div class="edu-field">Международная торговля и деловой китайский язык</div>
+        <ul class="edu-list">
+          <li>Логистика и управление цепями поставок</li>
+          <li>Международная торговля и Supply Chain Management</li>
+          <li>Деловой китайский язык — продвинутый уровень</li>
+          <li>Межкультурные бизнес-коммуникации</li>
+          <li>ВЭД и таможенное регулирование</li>
+        </ul>
+      </div>
+
+      <div class="edu-side">
+        <div class="edu-side-card dark">
+          <div class="edu-side-title">5 лет в Шанхае</div>
+          <div class="edu-side-sub">Погружение в рынок и культуру</div>
+          <div class="edu-side-body">
+            Обучение в Шанхае — это 5 лет практического погружения в китайскую бизнес-среду:
+            переговоры, выставки, работа с фабриками и понимание деловой культуры изнутри.
+          </div>
+        </div>
+        <div class="edu-side-card gold">
+          <div class="edu-side-title">HSK 6</div>
+          <div class="edu-side-sub">Высший международный сертификат</div>
+          <div class="edu-side-body">
+            Свободное деловое общение на китайском языке — переговоры, переписка,
+            документация. Высший уровень международной квалификации.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     LANGUAGES
+     ==================================================== -->
+<section class="section languages" id="languages">
+  <div class="inner">
+    <div class="reveal">
+      <div class="sec-label">Языковые навыки</div>
+      <h2 class="sec-title">Говорю на трёх рынках</h2>
+      <div class="sec-divider"></div>
+    </div>
+
+    <!-- ====== ЗАМЕНИ ЯЗЫКИ ЗДЕСЬ ====== -->
+    <!-- ring-fg stroke-dashoffset = 207 * (1 - процент/100) -->
+    <div class="lang-grid reveal">
+
+      <div class="lang-card">
+        <div class="lang-ring-wrap">
+          <svg class="ring-svg" width="76" height="76" viewBox="0 0 76 76">
+            <circle class="ring-bg" cx="38" cy="38" r="33"/>
+            <circle class="ring-fg" cx="38" cy="38" r="33" stroke-dashoffset="0"/>
+          </svg>
+          <span class="lang-pct">100%</span>
+        </div>
+        <div class="lang-name">Русский</div>
+        <div class="lang-level">Родной</div>
+        <div class="lang-desc">Родной язык. Полная деловая и личная коммуникация.</div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-ring-wrap">
+          <svg class="ring-svg" width="76" height="76" viewBox="0 0 76 76">
+            <circle class="ring-bg" cx="38" cy="38" r="33"/>
+            <circle class="ring-fg" cx="38" cy="38" r="33" stroke-dashoffset="21"/>
+          </svg>
+          <span class="lang-pct">90%</span>
+        </div>
+        <div class="lang-name">中文</div>
+        <div class="lang-level">HSK 6 — Свободно</div>
+        <div class="lang-desc">Деловые переговоры, документация, живая коммуникация с китайскими партнёрами.</div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-ring-wrap">
+          <svg class="ring-svg" width="76" height="76" viewBox="0 0 76 76">
+            <circle class="ring-bg" cx="38" cy="38" r="33"/>
+            <circle class="ring-fg" cx="38" cy="38" r="33" stroke-dashoffset="62"/>
+          </svg>
+          <span class="lang-pct">70%</span>
+        </div>
+        <div class="lang-name">English</div>
+        <div class="lang-level">B2 — Деловой</div>
+        <div class="lang-desc">Деловая переписка, международные переговоры, работа с зарубежными партнёрами.</div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-ring-wrap">
+          <svg class="ring-svg" width="76" height="76" viewBox="0 0 76 76">
+            <circle class="ring-bg" cx="38" cy="38" r="33"/>
+            <circle class="ring-fg" cx="38" cy="38" r="33" stroke-dashoffset="166"/>
+          </svg>
+          <span class="lang-pct">20%</span>
+        </div>
+        <div class="lang-name">한국어</div>
+        <div class="lang-level">A2 — Базовый</div>
+        <div class="lang-desc">Базовый уровень. Знакомство с корейским деловым пространством.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     CONTACT
+     ==================================================== -->
+<section class="section contact" id="contact">
+  <div class="inner">
+    <div class="contact-grid-wrap">
+
+      <div class="contact-left reveal">
+        <div class="sec-label">Контакты</div>
+        <h2 class="sec-title">Готов к диалогу</h2>
+        <!-- ====== ЗАМЕНИ ТЕКСТ КОНТАКТА ЗДЕСЬ ====== -->
+        <p class="contact-sub">
+          Открыт для предложений в сфере международных продаж, ВЭД,
+          закупок и сопровождения сделок на рынках Китая и России/СНГ.
+          Работаю из Шанхая, готов к командировкам и удалённому формату.
+        </p>
+        <!-- ====== ЗАМЕНИ ССЫЛКИ НА КНОПКИ ЗДЕСЬ ====== -->
+        <div class="cta-row">
+          <a href="mailto:danil_semenyuk@mail.ru" class="btn btn-gold">✉ Написать письмо</a>
+          <a href="https://t.me/shanghaimanager" class="btn btn-ghost">Telegram</a>
+          <a href="#" class="btn btn-ghost" onclick="alert('Добавьте ссылку на PDF-резюме')">↓ Скачать CV</a>
+        </div>
+      </div>
+
+      <div class="contact-right reveal delay-1">
+        <!-- ====== ЗАМЕНИ КОНТАКТНЫЕ ДАННЫЕ ЗДЕСЬ ====== -->
+        <div class="c-info-grid">
+          <div class="c-info-item">
+            <div class="c-info-label">Email</div>
+            <div class="c-info-val">
+              <a href="mailto:danil_semenyuk@mail.ru">danil_semenyuk@mail.ru</a>
+            </div>
+          </div>
+          <div class="c-info-item">
+            <div class="c-info-label">Телефон / WhatsApp</div>
+            <div class="c-info-val">
+              <a href="tel:+8619821833439">+86 198 2183 3439</a>
+            </div>
+          </div>
+          <div class="c-info-item">
+            <div class="c-info-label">WeChat</div>
+            <div class="c-info-val">eluosinanzi</div>
+          </div>
+          <div class="c-info-item">
+            <div class="c-info-label">Telegram</div>
+            <div class="c-info-val">
+              <a href="https://t.me/shanghaimanager">@shanghaimanager</a>
+            </div>
+          </div>
+          <div class="c-info-item">
+            <div class="c-info-label">Локация</div>
+            <div class="c-info-val">Шанхай, Китай 🇨🇳</div>
+          </div>
+          <div class="c-info-item">
+            <div class="c-info-label">Готовность</div>
+            <div class="c-info-val">Открыт к предложениям</div>
+          </div>
+        </div>
+
+        <!-- ====== ЗАМЕНИ QR-КОД WECHAT ЗДЕСЬ ====== -->
+        <!-- Удали .wechat-note и добавь:
+             <img src="wechat-qr.png" alt="WeChat QR" style="width:120px;margin-top:1rem">
+        -->
+        <div class="wechat-note">
+          📱 WeChat: eluosinanzi — добавьте сюда QR-код WeChat как изображение
+          (замените этот блок на &lt;img src="wechat-qr.png"&gt;)
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     FOOTER
+     ==================================================== -->
+<footer>
+  <div class="foot-inner">
+    <!-- ====== ЗАМЕНИ ИМЯ В ФУТЕРЕ ЗДЕСЬ ====== -->
+    <div class="foot-brand">Семенюк Данил · 丹尼尔</div>
+    <div class="foot-copy">ШАНХАЙ · ВЭД · МЕЖДУНАРОДНЫЕ ПРОДАЖИ · © 2025</div>
+  </div>
+</footer>
+
+<!-- ====================================================
+     JAVASCRIPT
+     ==================================================== -->
+<script>
+  // Navbar — добавляет тёмный фон при скролле
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('solid', window.scrollY > 60);
+  });
+
+  // Scroll reveal — элементы появляются при прокрутке
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 60);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => io.observe(el));
+
+  // Exp nav — подсветка активного пункта при клике
+  document.querySelectorAll('.exp-nav-item').forEach(item => {
+    item.addEventListener('click', function() {
+      document.querySelectorAll('.exp-nav-item').forEach(i => i.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
