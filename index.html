@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Semeniuk Danil — 国际贸易专家 · ВЭД специалист · International Trade & B2B Sales">
+  <title>Semeniuk Danil | 丹尼尔 — International Trade & B2B Sales</title>
+
+  <!-- ============================================================
+       FONTS
+       Works with both Chinese and Cyrillic/Latin characters
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Cormorant Garamond', 'Georgia', 'serif'],
+            body: ['DM Sans', 'Noto Sans SC', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+       Change colors here to retheme the whole site
+    ============================================================ */
+    :root {
+      --navy:        #060C1A;
+      --navy-mid:    #0A1525;
+      --navy-light:  #0F1F36;
+      --gold:        #C9A465;
+      --gold-light:  #E8D4A2;
+      --gold-dark:   #9B7A3A;
+      --gold-glow:   rgba(201,164,101,0.18);
+      --border:      rgba(201,164,101,0.13);
+      --border-h:    rgba(201,164,101,0.35);
+      --glass:       rgba(255,255,255,0.035);
+      --text-muted:  rgba(255,255,255,0.55);
+      --text-faint:  rgba(255,255,255,0.35);
+    }
+
+    /* ============================================================ BASE */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', 'Noto Sans SC', system-ui, sans-serif;
+      background: var(--navy);
+      color: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+    /* ============================================================ TYPOGRAPHY */
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .text-gold    { color: var(--gold); }
+    .text-gold-grad {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .eyebrow {
+      font-size: .7rem; font-weight: 500; letter-spacing: .22em;
+      text-transform: uppercase; color: var(--gold);
+    }
+
+    /* ============================================================ NAV */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(6,12,26,.88);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all .3s;
+    }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+      font-weight: 400; letter-spacing: .12em; color: #fff; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: .76rem; font-weight: 400; letter-spacing: .05em;
+      color: rgba(255,255,255,.6); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .lang-btn {
+      font-size: .68rem; font-weight: 600; letter-spacing: .16em;
+      padding: 5px 13px; border: 1px solid var(--gold);
+      color: var(--gold); border-radius: 3px; cursor: pointer;
+      background: transparent; transition: all .25s;
+    }
+    .lang-btn:hover { background: var(--gold); color: var(--navy); }
+    .hamburger { display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 1.5px;
+      background: rgba(255,255,255,.7); transition: all .3s; }
+    @media(max-width:900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* Mobile menu */
+    #mobileMenu {
+      display: none; position: fixed; top: 66px; left: 0; right: 0; z-index: 49;
+      background: rgba(6,12,26,.97); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border); padding: 1.5rem 1.5rem;
+    }
+    #mobileMenu.open { display: block; }
+    #mobileMenu a {
+      display: block; padding: .75rem 0; font-size: .9rem;
+      color: rgba(255,255,255,.7); text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.06); transition: color .2s;
+    }
+    #mobileMenu a:hover { color: var(--gold); }
+
+    /* ============================================================ BUTTONS */
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 11px 24px; border-radius: 4px; font-size: .78rem;
+      font-weight: 600; letter-spacing: .07em; text-decoration: none; cursor: pointer;
+      background: linear-gradient(135deg, var(--gold) 0%, #B8914F 100%);
+      color: var(--navy); border: none; transition: all .3s;
+    }
+    .btn-gold:hover { box-shadow: 0 8px 24px rgba(201,164,101,.4); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 10px 22px; border-radius: 4px; font-size: .78rem;
+      font-weight: 400; letter-spacing: .04em; text-decoration: none; cursor: pointer;
+      background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.22); transition: all .3s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 10px 20px; border-radius: 4px; font-size: .78rem;
+      font-weight: 400; letter-spacing: .04em; text-decoration: none; cursor: pointer;
+      background: transparent; color: rgba(255,255,255,.55);
+      border: 1px solid rgba(255,255,255,.1); transition: all .3s;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.05); color: #fff; border-color: rgba(255,255,255,.2); }
+
+    /* ============================================================ HERO */
+    #hero {
+      min-height: 100vh; position: relative; overflow: hidden;
+      display: flex; align-items: center; padding-top: 66px;
+      background: var(--navy);
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(201,164,101,.038) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,164,101,.038) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 30%, transparent 100%);
+    }
+    .hero-glow {
+      position: absolute; top: -5%; left: 50%; transform: translateX(-50%);
+      width: 70%; height: 55%;
+      background: radial-gradient(ellipse, rgba(201,164,101,.055) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 5rem 1.5rem 4rem;
+      width: 100%; position: relative; z-index: 2; }
+    .hero-grid { display: grid; grid-template-columns: 3fr 2fr;
+      gap: 3.5rem; align-items: center; }
+    @media(max-width:960px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    .hero-eyebrow-wrap { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.4rem; }
+    .hero-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+    .hero-name-line1 {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 7.5vw, 6.2rem);
+      font-weight: 300; letter-spacing: .06em; line-height: .9; color: rgba(255,255,255,.9);
+    }
+    .hero-name-line2 {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 7.5vw, 6.2rem);
+      font-weight: 400; font-style: italic; letter-spacing: .04em; line-height: .9;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 60%, var(--gold) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-cn-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 300;
+      letter-spacing: .25em; color: rgba(201,164,101,.7); margin-top: .5rem;
+    }
+    .hero-role-tag {
+      display: inline-block; padding: 5px 14px;
+      border: 1px solid rgba(201,164,101,.28); border-radius: 2px;
+      font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold-light); background: rgba(201,164,101,.06);
+      margin-top: 1.1rem; margin-bottom: 1rem;
+    }
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      font-style: italic; font-weight: 300; color: rgba(255,255,255,.78);
+      line-height: 1.4; margin-bottom: .9rem;
+    }
+    .hero-summary {
+      font-size: .85rem; color: rgba(255,255,255,.55);
+      line-height: 1.75; max-width: 500px; margin-bottom: 2rem;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+    /* Hero visual panel */
+    .hero-visual-card {
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: 18px; padding: 1.75rem 1.5rem;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    }
+    .hero-visual-label {
+      font-size: .63rem; font-weight: 500; letter-spacing: .2em;
+      text-transform: uppercase; color: rgba(201,164,101,.45);
+      text-align: center; margin-bottom: .85rem;
+    }
+    .hero-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: .5rem; margin-top: 1rem; }
+    .hero-metric { text-align: center; padding: .7rem .4rem;
+      background: rgba(255,255,255,.025); border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.05); }
+    .hero-metric-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.55rem;
+      font-weight: 300; color: var(--gold-light); line-height: 1;
+    }
+    .hero-metric-lbl { font-size: .62rem; color: rgba(255,255,255,.45);
+      margin-top: 3px; letter-spacing: .02em; }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 2;
+    }
+    .scroll-hint span { font-size: .62rem; letter-spacing: .18em;
+      text-transform: uppercase; color: rgba(255,255,255,.3); }
+    .scroll-arrow {
+      width: 22px; height: 22px; border-right: 1px solid rgba(201,164,101,.4);
+      border-bottom: 1px solid rgba(201,164,101,.4);
+      transform: rotate(45deg); animation: bounce 2s ease-in-out infinite;
+    }
+    @keyframes bounce { 0%,100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(4px); } }
+
+    /* ============================================================ SECTIONS */
+    .section-wrap { max-width: 1280px; margin: 0 auto; padding: 6rem 1.5rem; }
+    .section-head { margin-bottom: 3.5rem; }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 300; line-height: 1.1; color: #fff; margin-top: .5rem;
+    }
+    .gold-line { width: 40px; height: 1.5px; background: var(--gold);
+      margin-top: .9rem; opacity: .6; }
+
+    /* Alternating section backgrounds */
+    .bg-alt { background: var(--navy-mid); }
+
+    /* ============================================================ GLASS CARD */
+    .glass {
+      background: var(--glass); border: 1px solid var(--border);
+      border-radius: 14px; transition: all .3s;
+    }
+    .glass:hover { border-color: var(--border-h);
+      box-shadow: 0 18px 50px rgba(0,0,0,.35), 0 0 28px var(--gold-glow); }
+
+    /* ============================================================ ABOUT */
+    .about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3.5rem; align-items: start; }
+    @media(max-width:900px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .about-p { font-size: .88rem; color: rgba(255,255,255,.68);
+      line-height: 1.85; margin-bottom: 1.1rem; }
+    .about-highlight {
+      padding: 1.6rem 1.4rem; background: rgba(201,164,101,.04);
+      border: 1px solid var(--border); border-radius: 12px; margin-bottom: .85rem;
+    }
+    .about-highlight-icon { font-size: 1.1rem; margin-bottom: .4rem; }
+    .about-highlight-title { font-size: .8rem; font-weight: 500; color: #fff; margin-bottom: .2rem; }
+    .about-highlight-sub { font-size: .75rem; color: rgba(255,255,255,.5); }
+
+    /* ============================================================ SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: .85rem; }
+    @media(max-width:1000px) { .skills-grid { grid-template-columns: repeat(3,1fr); } }
+    @media(max-width:660px)  { .skills-grid { grid-template-columns: repeat(2,1fr); } }
+    .skill-card {
+      padding: 1.2rem 1rem; background: rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.07); border-radius: 11px; transition: all .3s;
+    }
+    .skill-card:hover {
+      background: rgba(201,164,101,.05); border-color: rgba(201,164,101,.28);
+      transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+    .skill-icon { font-size: 1.1rem; margin-bottom: .5rem; }
+    .skill-title { font-size: .8rem; font-weight: 500; color: #fff; margin-bottom: .2rem; }
+    .skill-sub { font-size: .72rem; color: rgba(255,255,255,.45); line-height: 1.4; }
+
+    /* ============================================================ EXPERIENCE */
+    .exp-card {
+      background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07);
+      border-radius: 18px; padding: 2.5rem 2.75rem; position: relative; overflow: hidden;
+      transition: all .3s;
+    }
+    .exp-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    .exp-card:hover { border-color: rgba(201,164,101,.22);
+      box-shadow: 0 22px 60px rgba(0,0,0,.3); }
+    @media(max-width:768px) { .exp-card { padding: 1.75rem 1.5rem; } }
+    .exp-date {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 13px; background: rgba(201,164,101,.1);
+      border: 1px solid rgba(201,164,101,.25); border-radius: 3px;
+      font-size: .68rem; font-weight: 600; letter-spacing: .12em; color: var(--gold);
+      margin-bottom: .9rem;
+    }
+    .exp-company {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+      font-weight: 400; color: #fff; letter-spacing: .04em; margin-bottom: .25rem;
+    }
+    .exp-role { font-size: .82rem; color: rgba(201,164,101,.8);
+      letter-spacing: .06em; font-weight: 500; margin-bottom: .3rem; }
+    .exp-location { font-size: .73rem; color: rgba(255,255,255,.38);
+      letter-spacing: .05em; margin-bottom: 1.5rem; }
+    .exp-bullets { list-style: none; }
+    .exp-bullets li {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: .7rem; font-size: .83rem; color: rgba(255,255,255,.68); line-height: 1.65;
+    }
+    .exp-bullets li::before {
+      content: ''; width: 4px; height: 4px; background: var(--gold);
+      border-radius: 50%; margin-top: .55rem; flex-shrink: 0;
+    }
+    .case-block {
+      margin-top: 1.75rem; padding: 1.4rem 1.5rem;
+      background: rgba(201,164,101,.04); border: 1px solid rgba(201,164,101,.15);
+      border-radius: 12px;
+    }
+    .case-label { font-size: .62rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: .6rem; }
+    .case-text { font-size: .82rem; color: rgba(255,255,255,.62); line-height: 1.75; }
+
+    /* ============================================================ ACHIEVEMENTS */
+    .stats-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: .85rem; }
+    @media(max-width:1100px) { .stats-grid { grid-template-columns: repeat(3,1fr); } }
+    @media(max-width:600px)  { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+    .stat-card {
+      background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07);
+      border-radius: 13px; padding: 1.75rem 1rem; text-align: center;
+      position: relative; overflow: hidden; transition: all .3s;
+    }
+    .stat-card::after {
+      content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 40%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .stat-card:hover {
+      background: rgba(201,164,101,.05); border-color: rgba(201,164,101,.25);
+      transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,0,0,.3);
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 2.9rem); font-weight: 300;
+      color: var(--gold-light); line-height: 1;
+    }
+    .stat-suf { font-size: 1rem; color: var(--gold); }
+    .stat-lbl { font-size: .7rem; color: rgba(255,255,255,.5);
+      margin-top: .4rem; line-height: 1.4; }
+
+    /* ============================================================ EDUCATION */
+    .edu-card {
+      background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07);
+      border-radius: 18px; padding: 2.75rem 3rem; position: relative; overflow: hidden;
+    }
+    .edu-card::before {
+      content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+    }
+    @media(max-width:768px) { .edu-card { padding: 2rem 1.5rem; } }
+    .edu-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; align-items: start; }
+    @media(max-width:900px) { .edu-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+    .edu-uni { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
+      font-weight: 400; color: #fff; margin-bottom: .3rem; }
+    .edu-uni-en { font-size: .75rem; color: rgba(255,255,255,.4);
+      letter-spacing: .03em; margin-bottom: 1rem; }
+    .edu-degree-badge {
+      display: inline-block; padding: 3px 12px;
+      background: rgba(201,164,101,.1); border: 1px solid rgba(201,164,101,.25);
+      border-radius: 2px; font-size: .65rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: .6rem;
+    }
+    .edu-major { font-size: .85rem; color: rgba(255,255,255,.72); font-weight: 500; margin-bottom: .3rem; }
+    .edu-location { font-size: .75rem; color: rgba(255,255,255,.38); margin-bottom: .75rem; }
+    .edu-courses-label { font-size: .65rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: .7rem; }
+    .edu-course {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: .78rem; color: rgba(255,255,255,.6); line-height: 1.55; margin-bottom: .4rem;
+    }
+    .edu-course::before { content: '—'; color: rgba(201,164,101,.5); flex-shrink: 0; margin-top: 0; }
+    .edu-graduated {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 14px; background: rgba(201,164,101,.08);
+      border: 1px solid rgba(201,164,101,.2); border-radius: 20px;
+      font-size: .7rem; color: var(--gold-light); letter-spacing: .07em;
+    }
+
+    /* ============================================================ LANGUAGES */
+    .lang-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+    @media(max-width:640px) { .lang-grid { grid-template-columns: 1fr; } }
+    .lang-card {
+      background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07);
+      border-radius: 13px; padding: 1.6rem 1.4rem; transition: all .3s;
+    }
+    .lang-card:hover { border-color: rgba(201,164,101,.25);
+      background: rgba(201,164,101,.04); }
+    .lang-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem;
+      font-weight: 400; color: #fff; }
+    .lang-level { font-size: .7rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--gold); margin-left: .5rem; }
+    .lang-desc { font-size: .75rem; color: rgba(255,255,255,.45); margin: .5rem 0 .85rem; }
+    .lang-bar-bg { height: 3px; background: rgba(255,255,255,.08); border-radius: 2px; overflow: hidden; }
+    .lang-bar {
+      height: 100%; border-radius: 2px; width: 0; transition: width 1.3s cubic-bezier(.16,1,.3,1);
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+    }
+
+    /* ============================================================ CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+    @media(max-width:900px) { .contact-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .contact-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: .9rem 0; border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .contact-icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: rgba(201,164,101,.08); border: 1px solid rgba(201,164,101,.15);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: .88rem; flex-shrink: 0;
+    }
+    .contact-lbl { font-size: .65rem; text-transform: uppercase;
+      letter-spacing: .1em; color: rgba(255,255,255,.38); margin-bottom: 2px; }
+    .contact-val { font-size: .86rem; color: rgba(255,255,255,.82); }
+    .contact-val a { color: inherit; text-decoration: none; }
+    .contact-val a:hover { color: var(--gold); }
+    .contact-cta-text {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic;
+      font-weight: 300; color: rgba(255,255,255,.72); line-height: 1.65; margin-bottom: 1.75rem;
+    }
+
+    /* ============================================================ FOOTER */
+    footer {
+      background: #030711; border-top: 1px solid rgba(201,164,101,.08);
+      padding: 2.5rem 1.5rem; text-align: center;
+    }
+    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
+      font-weight: 300; letter-spacing: .12em; color: rgba(255,255,255,.5);
+      margin-bottom: .3rem; }
+    .footer-role { font-size: .68rem; letter-spacing: .15em; color: rgba(201,164,101,.4);
+      text-transform: uppercase; margin-bottom: .6rem; }
+    .footer-email { font-size: .75rem; color: rgba(255,255,255,.25); }
+
+    /* ============================================================ BACK TO TOP */
+    #backToTop {
+      position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 40;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(201,164,101,.12); border: 1px solid rgba(201,164,101,.28);
+      color: var(--gold); cursor: pointer; opacity: 0; transform: translateY(10px);
+      transition: all .3s; display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+    }
+    #backToTop.show { opacity: 1; transform: translateY(0); }
+    #backToTop:hover { background: var(--gold); color: var(--navy); }
+
+    /* ============================================================ REVEAL */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.d1 { transition-delay: .1s; }
+    .reveal.d2 { transition-delay: .2s; }
+    .reveal.d3 { transition-delay: .3s; }
+    .reveal.d4 { transition-delay: .4s; }
+
+    /* ============================================================ DIVIDER */
+    .gold-div { height: 1px; background: linear-gradient(90deg,transparent,rgba(201,164,101,.2),transparent);
+      margin: 0 auto; max-width: 480px; }
+
+    /* ============================================================ PRINT */
+    @media print {
+      #nav, #mobileMenu, .scroll-hint, #backToTop, .hero-grid-bg, .hero-glow { display: none !important; }
+      body { background: white; color: black; }
+      .exp-card, .stat-card, .skill-card { border: 1px solid #ddd !important; background: white !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">SEMENIUK <span>D.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about"       data-i18n="nav_about">关于我</a></li>
+      <li><a href="#skills"      data-i18n="nav_skills">核心能力</a></li>
+      <li><a href="#experience"  data-i18n="nav_exp">工作经历</a></li>
+      <li><a href="#achievements"data-i18n="nav_achieve">工作成果</a></li>
+      <li><a href="#education"   data-i18n="nav_edu">教育背景</a></li>
+      <li><a href="#contact"     data-i18n="nav_contact">联系我</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-btn" id="langToggle" onclick="toggleLang()">RU · РУС</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu">
+  <a href="#about"        onclick="closeMenu()" data-i18n="nav_about">关于我</a>
+  <a href="#skills"       onclick="closeMenu()" data-i18n="nav_skills">核心能力</a>
+  <a href="#experience"   onclick="closeMenu()" data-i18n="nav_exp">工作经历</a>
+  <a href="#achievements" onclick="closeMenu()" data-i18n="nav_achieve">工作成果</a>
+  <a href="#education"    onclick="closeMenu()" data-i18n="nav_edu">教育背景</a>
+  <a href="#languages"    onclick="closeMenu()" data-i18n="nav_lang">语言能力</a>
+  <a href="#contact"      onclick="closeMenu()" data-i18n="nav_contact">联系我</a>
+</div>
+
+
+<!-- ============================================================
+     01 · HERO
+============================================================ -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-inner">
+    <div class="hero-grid">
+
+      <!-- LEFT: Text content -->
+      <div>
+        <div class="hero-eyebrow-wrap reveal">
+          <div class="hero-dot"></div>
+          <span class="eyebrow" data-i18n="hero_eyebrow">国际业务专家 · 上海</span>
+        </div>
+
+        <div class="reveal d1">
+          <div class="hero-name-line1">SEMENIUK</div>
+          <div class="hero-name-line2">DANIL</div>
+          <div class="hero-cn-name">丹尼尔</div>
+        </div>
+
+        <div class="hero-role-tag reveal d2" data-i18n="hero_role">
+          国际业务开发专员 · 外贸销售 · 俄罗斯及独联体市场
+        </div>
+
+        <p class="hero-tagline reveal d2" data-i18n="hero_tagline">
+          连接中国工厂与俄语区市场的贸易专家
+        </p>
+
+        <p class="hero-summary reveal d3" data-i18n="hero_summary">
+          具备国际贸易、B2B销售、供应商开发及跨境执行实战经验，熟悉中国制造业生态与俄语区客户需求，三语商务沟通，助力中国企业高效拓展海外市场。
+        </p>
+
+        <!-- ============================================================
+             CTA BUTTONS
+             ↓ Replace href values with your actual PDF file names
+             e.g. href="./丹尼尔中文简历.pdf" and href="./RUS_RESUME.pdf"
+        ============================================================ -->
+        <div class="hero-ctas reveal d3">
+          <a href="./cv-chinese.pdf" download class="btn-gold">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="btn_cv_cn">下载中文简历</span>
+          </a>
+          <a href="./cv-russian.pdf" download class="btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="btn_cv_ru">下载俄文简历</span>
+          </a>
+          <a href="mailto:danil_semenyuk@mail.ru" class="btn-ghost">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+            <span data-i18n="btn_email">发送邮件</span>
+          </a>
+          <a href="#contact" class="btn-ghost">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <span data-i18n="btn_scroll">查看经历</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Trade route visual + quick metrics -->
+      <div class="reveal d2">
+        <div class="hero-visual-card">
+          <div class="hero-visual-label" data-i18n="hero_corridor_label">贸易走廊 · SUPPLY CORRIDOR</div>
+
+          <!-- ============================================================
+               ANIMATED TRADE ROUTE SVG — SIGNATURE ELEMENT
+               Shows the Shanghai → Russia/CIS trade corridor
+          ============================================================ -->
+          <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg"
+               style="width:100%;overflow:visible" aria-hidden="true">
+
+            <!-- Faint geographic context lines -->
+            <path d="M20 110 Q60 90 100 100 Q140 110 180 98" stroke="rgba(255,255,255,0.045)" stroke-width="1.2" fill="none"/>
+            <path d="M165 105 Q220 118 270 110 Q330 100 390 98 Q450 96 510 88" stroke="rgba(255,255,255,0.045)" stroke-width="1.2" fill="none"/>
+            <path d="M380 75 Q420 60 460 65 Q500 70 530 60" stroke="rgba(255,255,255,0.035)" stroke-width="1" fill="none"/>
+
+            <!-- Main animated route line -->
+            <path id="routePath"
+              d="M 75 140 C 140 90 230 65 320 68 C 400 72 468 82 520 95"
+              fill="none" stroke="#C9A465" stroke-width="1.1"
+              stroke-dasharray="5 11" opacity="0.5">
+              <animate attributeName="stroke-dashoffset" from="0" to="-48"
+                       dur="3.5s" repeatCount="indefinite"/>
+            </path>
+
+            <!-- Shanghai node -->
+            <g transform="translate(75,140)">
+              <circle r="14" fill="rgba(201,164,101,0.07)">
+                <animate attributeName="r" values="14;22;14" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle r="7" fill="rgba(201,164,101,0.18)" stroke="#C9A465" stroke-width="1"/>
+              <circle r="3.5" fill="#C9A465"/>
+              <text y="26" text-anchor="middle" fill="#C9A465"
+                    font-family="Cormorant Garamond, serif" font-size="11" font-weight="600" letter-spacing="1">上海</text>
+              <text y="37" text-anchor="middle" fill="rgba(255,255,255,0.38)"
+                    font-family="DM Sans, sans-serif" font-size="7.5" letter-spacing="2">SHANGHAI</text>
+            </g>
+
+            <!-- Mid nodes (Xinjiang / Central Asia waypoints) -->
+            <g transform="translate(210,75)">
+              <circle r="3" fill="rgba(201,164,101,0.45)"/>
+              <circle r="7" fill="none" stroke="rgba(201,164,101,0.12)" stroke-width="1"/>
+            </g>
+            <g transform="translate(350,70)">
+              <circle r="3" fill="rgba(201,164,101,0.45)"/>
+              <circle r="7" fill="none" stroke="rgba(201,164,101,0.12)" stroke-width="1"/>
+            </g>
+            <g transform="translate(450,84)">
+              <circle r="2.5" fill="rgba(201,164,101,0.35)"/>
+            </g>
+
+            <!-- Russia / CIS node -->
+            <g transform="translate(520,95)">
+              <circle r="14" fill="rgba(201,164,101,0.07)">
+                <animate attributeName="r" values="14;22;14" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle r="7" fill="rgba(201,164,101,0.18)" stroke="#C9A465" stroke-width="1"/>
+              <circle r="3.5" fill="#C9A465"/>
+              <text y="-20" text-anchor="middle" fill="#C9A465"
+                    font-family="Cormorant Garamond, serif" font-size="11" font-weight="600" letter-spacing="1">Россия</text>
+              <text y="-9" text-anchor="middle" fill="rgba(255,255,255,0.38)"
+                    font-family="DM Sans, sans-serif" font-size="7.5" letter-spacing="2">СНГ · CIS</text>
+            </g>
+
+            <!-- Travelling dot -->
+            <circle r="4.5" fill="#E8D4A2" opacity="0.9">
+              <animateMotion dur="5s" repeatCount="indefinite"
+                path="M 75 140 C 140 90 230 65 320 68 C 400 72 468 82 520 95"/>
+            </circle>
+            <circle r="2.5" fill="rgba(201,164,101,0.4)">
+              <animateMotion dur="5s" begin="2.5s" repeatCount="indefinite"
+                path="M 75 140 C 140 90 230 65 320 68 C 400 72 468 82 520 95"/>
+            </circle>
+          </svg>
+          <!-- END TRADE ROUTE SVG -->
+
+          <!-- Quick metrics row -->
+          <div class="hero-metrics">
+            <div class="hero-metric">
+              <div class="hero-metric-num">29<span style="font-size:.8rem;color:var(--gold)">+</span></div>
+              <div class="hero-metric-lbl" data-i18n="hm1">月均订单</div>
+            </div>
+            <div class="hero-metric">
+              <div class="hero-metric-num">95<span style="font-size:.8rem;color:var(--gold)">%</span></div>
+              <div class="hero-metric-lbl" data-i18n="hm2">准时交付</div>
+            </div>
+            <div class="hero-metric">
+              <div class="hero-metric-num">HSK<span style="font-size:.8rem;color:var(--gold)">6</span></div>
+              <div class="hero-metric-lbl" data-i18n="hm3">中文水平</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /hero-grid -->
+  </div><!-- /hero-inner -->
+
+  <div class="scroll-hint">
+    <span data-i18n="scroll_hint">向下滚动</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     02 · ABOUT ME
+============================================================ -->
+<section id="about" class="bg-alt">
+  <div class="section-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="about_eyebrow">个人简介</div>
+      <h2 class="section-title" data-i18n="about_title">国际市场的实战专家</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <!-- Text block -->
+      <div>
+        <p class="about-p reveal" data-i18n="about_p1">
+          我是一名具备国际贸易、B2B销售、采购寻源、出口协调及跨境项目执行经验的国际业务专才，深度熟悉中国制造业环境、工厂沟通模式及俄罗斯/CIS市场客户需求。毕业于华东政法大学跨境贸易与商务中文专业，具备中文、俄语、英语三语商务沟通能力。
+        </p>
+        <p class="about-p reveal d1" data-i18n="about_p2">
+          在华学习与工作期间，我积累了从客户沟通、供应商开发到订单推进、国际物流协调的完整外贸实战经验，能够高效协助中国企业对接俄罗斯及海外市场。熟悉工业设备、工程机械、化工原料及技术类产品，能够快速理解产品逻辑，推动商务沟通与项目落地。
+        </p>
+        <p class="about-p reveal d2" data-i18n="about_p3">
+          具备强烈责任感与执行力，适应快节奏高强度国际业务环境，可接受出差及海外拓展。致力于帮助中国制造企业开发海外客户，提升国际业务效率，建立稳定的国际合作关系。
+        </p>
+      </div>
+
+      <!-- Highlights column -->
+      <div>
+        <div class="about-highlight reveal glass">
+          <div class="about-highlight-icon">🌐</div>
+          <div class="about-highlight-title" data-i18n="ah1_title">三语商务沟通</div>
+          <div class="about-highlight-sub" data-i18n="ah1_sub">中文 HSK6 · 俄语母语 · 英语B2</div>
+        </div>
+        <div class="about-highlight reveal d1 glass">
+          <div class="about-highlight-icon">🏭</div>
+          <div class="about-highlight-title" data-i18n="ah2_title">中国供应链专家</div>
+          <div class="about-highlight-sub" data-i18n="ah2_sub">100+ 中国制造商资源库，工业设备·机械·化工</div>
+        </div>
+        <div class="about-highlight reveal d2 glass">
+          <div class="about-highlight-icon">📦</div>
+          <div class="about-highlight-title" data-i18n="ah3_title">俄语区市场对接</div>
+          <div class="about-highlight-sub" data-i18n="ah3_sub">俄罗斯 · 独联体 · 国际市场 B2B 客户开发</div>
+        </div>
+        <div class="about-highlight reveal d3 glass">
+          <div class="about-highlight-icon">📊</div>
+          <div class="about-highlight-title" data-i18n="ah4_title">端到端项目执行</div>
+          <div class="about-highlight-sub" data-i18n="ah4_sub">3M+ RMB 采购协调 · 95%+ 准时交付</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     03 · CORE COMPETENCIES
+============================================================ -->
+<section id="skills">
+  <div class="section-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="skills_eyebrow">专业能力</div>
+      <h2 class="section-title" data-i18n="skills_title">核心竞争力</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Each card: icon, title (data-i18n), subtitle (data-i18n) -->
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚙️</div>
+        <div class="skill-title" data-i18n="sk1t">外贸全流程管理</div>
+        <div class="skill-sub"  data-i18n="sk1s">从询盘到出货的端到端执行</div>
+      </div>
+      <div class="skill-card reveal d1">
+        <div class="skill-icon">💼</div>
+        <div class="skill-title" data-i18n="sk2t">B2B 国际销售</div>
+        <div class="skill-sub"  data-i18n="sk2s">工业设备及技术类产品销售</div>
+      </div>
+      <div class="skill-card reveal d2">
+        <div class="skill-icon">🔍</div>
+        <div class="skill-title" data-i18n="sk3t">供应商开发与验证</div>
+        <div class="skill-sub"  data-i18n="sk3s">100+ 中国制造商数据库</div>
+      </div>
+      <div class="skill-card reveal d3">
+        <div class="skill-icon">🤝</div>
+        <div class="skill-title" data-i18n="sk4t">工厂谈判</div>
+        <div class="skill-sub"  data-i18n="sk4s">价格、MOQ、交期、包装协商</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">📋</div>
+        <div class="skill-title" data-i18n="sk5t">出口协调</div>
+        <div class="skill-sub"  data-i18n="sk5s">报关、物流节点跟进管理</div>
+      </div>
+      <div class="skill-card reveal d1">
+        <div class="skill-icon">🚢</div>
+        <div class="skill-title" data-i18n="sk6t">跨境物流</div>
+        <div class="skill-sub"  data-i18n="sk6s">Incoterms 2020 · 国际运输</div>
+      </div>
+      <div class="skill-card reveal d2">
+        <div class="skill-icon">👥</div>
+        <div class="skill-title" data-i18n="sk7t">客户关系管理</div>
+        <div class="skill-sub"  data-i18n="sk7s">俄罗斯、独联体及国际客户</div>
+      </div>
+      <div class="skill-card reveal d3">
+        <div class="skill-icon">🌍</div>
+        <div class="skill-title" data-i18n="sk8t">跨文化沟通</div>
+        <div class="skill-sub"  data-i18n="sk8s">中俄英三语业务对接</div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">📣</div>
+        <div class="skill-title" data-i18n="sk9t">B2B 数字营销</div>
+        <div class="skill-sub"  data-i18n="sk9s">品牌传播、内容营销、线索开发</div>
+      </div>
+      <div class="skill-card reveal d1">
+        <div class="skill-icon">🏛️</div>
+        <div class="skill-title" data-i18n="sk10t">展会商务接待</div>
+        <div class="skill-sub"  data-i18n="sk10s">上海国际展会 · 现场洽谈</div>
+      </div>
+      <div class="skill-card reveal d2">
+        <div class="skill-icon">🖥️</div>
+        <div class="skill-title" data-i18n="sk11t">CRM / ERP 系统</div>
+        <div class="skill-sub"  data-i18n="sk11s">Alibaba B2B · Global Sources · LinkedIn</div>
+      </div>
+      <div class="skill-card reveal d3">
+        <div class="skill-icon">💬</div>
+        <div class="skill-title" data-i18n="sk12t">多语言商务沟通</div>
+        <div class="skill-sub"  data-i18n="sk12s">中文 · 俄语 · 英语</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     04 · EXPERIENCE
+============================================================ -->
+<section id="experience" class="bg-alt">
+  <div class="section-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="exp_eyebrow">工作经历</div>
+      <h2 class="section-title" data-i18n="exp_title">职业经历</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <!-- ---- KESA ---- -->
+    <div class="exp-card reveal" style="margin-bottom:1.5rem">
+      <div class="exp-date" data-i18n="kesa_dates">2025 — 2026</div>
+      <div class="exp-company" data-i18n="kesa_company">Shanghai KESA</div>
+      <div class="exp-role"    data-i18n="kesa_role">国际业务专员 · 外贸销售</div>
+      <div class="exp-location">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="kesa_location">中国上海</span>
+      </div>
+      <ul class="exp-bullets">
+        <li data-i18n="kesa_b1">负责国际订单端到端管理，跟进从询盘、报价、下单到生产、物流及最终出货的全流程，确保客户、工厂与物流端信息准确衔接。ежемесячно сопровождал 25–30 активных заказов одновременно。</li>
+        <li data-i18n="kesa_b2">对潜在客户进行需求分析与资格筛选，重点梳理技术参数、交期、预算及贸易条款（Incoterms 2020），提升商务推进效率，缩短决策周期。</li>
+        <li data-i18n="kesa_b3">与中国工厂及供应商进行采购谈判，就价格、交期、MOQ（最小起订量）、包装及技术规格进行高效沟通，争取客户最优商务条件。</li>
+        <li data-i18n="kesa_b4">开展供应商寻源（Sourcing），对比多家制造商的技术能力、商务条件与交付能力，协助客户锁定最优方案，建立并维护 100+ 供应商数据库。</li>
+        <li data-i18n="kesa_b5">协调出口报关及跨境物流节点，确保 95%+ 的订单按计划准时交付，有效降低交期风险。</li>
+        <li data-i18n="kesa_b6">担任俄罗斯/CIS客户与中国制造商之间的沟通桥梁，以中俄英三语高效对接，减少跨文化误差，加速项目推进。</li>
+        <li data-i18n="kesa_b7">参与上海国际展会的商务接待、现场翻译、客户洽谈及会后线索跟进，累计对接潜在客户 100+ 。</li>
+        <li data-i18n="kesa_b8">熟练运用 Alibaba International、Made-in-China、Global Sources、LinkedIn 及 CRM/ERP 系统进行供应商开发与客户管理。</li>
+      </ul>
+
+      <!-- Project case study -->
+      <div class="case-block">
+        <div class="case-label" data-i18n="kesa_case_label">项目案例 · 供应链切换</div>
+        <p class="case-text" data-i18n="kesa_case_text">
+          某俄罗斯工业客户因原供应商无法确认生产周期，项目交期面临重大风险。我主导协调了供应链切换工作，快速筛选多家中国工厂，对比技术参数与商务条件，协调物流与出口流程，最终帮助客户在短时间内完成方案调整，成功保住订单，稳定客户关系，提升客户对中国供应链的信任度。
+        </p>
+      </div>
+    </div>
+
+    <!-- ---- COMPOSITE GROUP ---- -->
+    <div class="exp-card reveal d1">
+      <div class="exp-date" data-i18n="comp_dates">2023 — 2025</div>
+      <div class="exp-company" data-i18n="comp_company">俄罗斯大型工业材料公司 · Composite Group</div>
+      <div class="exp-role"    data-i18n="comp_role">SMM 经理 · 市场营销专员</div>
+      <div class="exp-location">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="comp_location">俄罗斯</span>
+      </div>
+      <ul class="exp-bullets">
+        <li data-i18n="comp_b1">负责工业材料行业 B2B 市场推广与客户开发支持，通过数字营销、品牌传播及内容运营助力销售团队拓展目标市场，覆盖俄罗斯、独联体及欧美市场潜在客户 5000+ 人次。</li>
+        <li data-i18n="comp_b2">策划并执行线上推广活动，推动企业官网及数字渠道月均访问量提升 35%，品牌内容累计曝光量突破 10 万+ 次。</li>
+        <li data-i18n="comp_b3">输出产品介绍、营销资料及商务沟通内容，完成 50+ 份产品资料及推广内容制作，为销售团队提供市场开发支持。</li>
+        <li data-i18n="comp_b4">参与国际市场品牌传播，协助企业参加 10+ 场线上线下行业推广活动，增强企业在目标行业及区域市场的专业影响力。</li>
+        <li data-i18n="comp_b5">通过数字渠道获取并培育潜在客户线索，累计获取有效销售线索 200+ 条，其中 30+ 条进入商务洽谈阶段。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     05 · ACHIEVEMENTS
+============================================================ -->
+<section id="achievements">
+  <div class="section-wrap">
+    <div class="section-head reveal" style="text-align:center">
+      <div class="eyebrow" data-i18n="achieve_eyebrow">工作成果</div>
+      <h2 class="section-title" data-i18n="achieve_title">用数字说话</h2>
+      <p style="font-size:.85rem;color:rgba(255,255,255,.45);margin-top:.5rem" data-i18n="achieve_sub">
+        真实业绩 · 量化结果 · 商业价值
+      </p>
+      <div class="gold-line" style="margin:1rem auto 0"></div>
+    </div>
+
+    <div class="stats-grid">
+      <!-- Each .stat-card has data-target for counter animation -->
+      <div class="stat-card reveal"    data-target="29">
+        <div class="stat-num"><span class="stat-val">29</span><span class="stat-suf">+</span></div>
+        <div class="stat-lbl" data-i18n="st1">月均独立跟进国际订单</div>
+      </div>
+      <div class="stat-card reveal d1" data-target="38">
+        <div class="stat-num"><span class="stat-val">38</span><span class="stat-suf">+</span></div>
+        <div class="stat-lbl" data-i18n="st2">月均处理国际客户询盘</div>
+      </div>
+      <div class="stat-card reveal d2" data-target="42">
+        <div class="stat-num"><span class="stat-val">42</span><span class="stat-suf">+</span></div>
+        <div class="stat-lbl" data-i18n="st3">评估开发中国供应商</div>
+      </div>
+      <div class="stat-card reveal d3" data-target="300">
+        <div class="stat-num"><span class="stat-val">300</span><span class="stat-suf" data-i18n="st4suf">万+</span></div>
+        <div class="stat-lbl" data-i18n="st4">协调跨境采购金额（RMB）</div>
+      </div>
+      <div class="stat-card reveal d4" data-target="95">
+        <div class="stat-num"><span class="stat-val">95</span><span class="stat-suf">%+</span></div>
+        <div class="stat-lbl" data-i18n="st5">订单准时交付率</div>
+      </div>
+      <div class="stat-card reveal"    data-target="100">
+        <div class="stat-num"><span class="stat-val">100</span><span class="stat-suf">+</span></div>
+        <div class="stat-lbl" data-i18n="st6">中国制造商资源库</div>
+      </div>
+      <div class="stat-card reveal d1" data-target="5000">
+        <div class="stat-num"><span class="stat-val">5000</span><span class="stat-suf">+</span></div>
+        <div class="stat-lbl" data-i18n="st7">覆盖国际潜在客户人次</div>
+      </div>
+      <div class="stat-card reveal d2" data-target="200">
+        <div class="stat-num"><span class="stat-val">200</span><span class="stat-suf">+</span></div>
+        <div class="stat-lbl" data-i18n="st8">有效销售线索</div>
+      </div>
+      <div class="stat-card reveal d3" data-target="100">
+        <div class="stat-num"><span class="stat-val">100</span><span class="stat-suf">K+</span></div>
+        <div class="stat-lbl" data-i18n="st9">品牌内容累计曝光量</div>
+      </div>
+      <div class="stat-card reveal d4" data-target="35">
+        <div class="stat-num"><span class="stat-val">35</span><span class="stat-suf">%↑</span></div>
+        <div class="stat-lbl" data-i18n="st10">网站月均访问量增长</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     06 · EDUCATION
+============================================================ -->
+<section id="education" class="bg-alt">
+  <div class="section-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="edu_eyebrow">教育背景</div>
+      <h2 class="section-title" data-i18n="edu_title">学术背景</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="edu-card reveal">
+      <div class="edu-grid">
+        <!-- Main info -->
+        <div>
+          <div class="edu-degree-badge" data-i18n="edu_degree">学士学位</div>
+          <h3 class="edu-uni" data-i18n="edu_uni">华东政法大学</h3>
+          <p class="edu-uni-en" data-i18n="edu_uni_en">East China University of Political Science and Law</p>
+          <div style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem">
+            <span style="font-size:.73rem;color:rgba(255,255,255,.38)">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:3px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="edu_location">中国上海</span>
+            </span>
+            <span style="color:rgba(255,255,255,.12)">·</span>
+            <span style="font-size:.73rem;color:rgba(255,255,255,.38)" data-i18n="edu_dates">2020 — 2025</span>
+          </div>
+          <p class="edu-major" data-i18n="edu_major">专业：跨境贸易与商务中文</p>
+          <div style="margin-top:1.25rem">
+            <div class="edu-graduated">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span data-i18n="edu_graduated">2025届毕业生</span>
+            </div>
+          </div>
+        </div>
+        <!-- Courses -->
+        <div>
+          <div class="edu-courses-label" data-i18n="edu_courses_label">附加培训 · 进修课程</div>
+          <div class="edu-course" data-i18n="edu_c1">物流管理专项课程</div>
+          <div class="edu-course" data-i18n="edu_c2">国际贸易与供应链管理</div>
+          <div class="edu-course" data-i18n="edu_c3">高级商务汉语</div>
+          <div class="edu-course" data-i18n="edu_c4">跨文化商务沟通</div>
+        </div>
+        <!-- Visual accent -->
+        <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:rgba(201,164,101,0.12);line-height:1;text-align:right">
+            2020<br>—<br>2025
+          </div>
+          <div style="font-size:.65rem;letter-spacing:.18em;color:rgba(201,164,101,.35);text-transform:uppercase;margin-top:.5rem" data-i18n="edu_shanghai">SHANGHAI · 上海</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     07 · LANGUAGES
+============================================================ -->
+<section id="languages">
+  <div class="section-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="lang_eyebrow">语言能力</div>
+      <h2 class="section-title" data-i18n="lang_title">语言专业能力</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="lang-grid" id="langSection">
+      <!-- Russian -->
+      <div class="lang-card reveal">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem">
+          <span class="lang-name" data-i18n="lng1_name">俄语</span>
+          <span class="lang-level" data-i18n="lng1_lvl">母语</span>
+        </div>
+        <div class="lang-desc" data-i18n="lng1_desc">Native speaker · Родной язык</div>
+        <div class="lang-bar-bg"><div class="lang-bar" data-width="100"></div></div>
+      </div>
+      <!-- Chinese -->
+      <div class="lang-card reveal d1">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem">
+          <span class="lang-name" data-i18n="lng2_name">中文</span>
+          <span class="lang-level" data-i18n="lng2_lvl">HSK 6</span>
+        </div>
+        <div class="lang-desc" data-i18n="lng2_desc">商务汉语流利 · Business Fluent</div>
+        <div class="lang-bar-bg"><div class="lang-bar" data-width="92"></div></div>
+      </div>
+      <!-- English -->
+      <div class="lang-card reveal d2">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem">
+          <span class="lang-name" data-i18n="lng3_name">English</span>
+          <span class="lang-level" data-i18n="lng3_lvl">B2</span>
+        </div>
+        <div class="lang-desc" data-i18n="lng3_desc">商务英语熟练 · Business Proficient</div>
+        <div class="lang-bar-bg"><div class="lang-bar" data-width="72"></div></div>
+      </div>
+      <!-- Korean -->
+      <div class="lang-card reveal d3">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem">
+          <span class="lang-name" data-i18n="lng4_name">한국어</span>
+          <span class="lang-level" data-i18n="lng4_lvl">A2</span>
+        </div>
+        <div class="lang-desc" data-i18n="lng4_desc">基础沟通 · Basic</div>
+        <div class="lang-bar-bg"><div class="lang-bar" data-width="22"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     08 · CONTACT
+============================================================ -->
+<section id="contact" class="bg-alt">
+  <div class="section-wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-i18n="contact_eyebrow">取得联系</div>
+      <h2 class="section-title" data-i18n="contact_title">欢迎联系合作</h2>
+      <p style="font-size:.88rem;color:rgba(255,255,255,.45);margin-top:.5rem" data-i18n="contact_sub">
+        对接中国工厂 · 拓展俄语区市场 · 驱动国际业务增长
+      </p>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact info -->
+      <div class="reveal">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl" data-i18n="c_phone_lbl">联系电话</div>
+            <div class="contact-val"><a href="tel:+7982183439">+19821833439</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl" data-i18n="c_email_lbl">电子邮件</div>
+            <div class="contact-val"><a href="mailto:danil_semenyuk@mail.ru">danil_semenyuk@mail.ru</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl" data-i18n="c_loc_lbl">所在城市</div>
+            <div class="contact-val" data-i18n="c_loc_val">中国 · 上海</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl">WeChat</div>
+            <div class="contact-val">eluosinanzi</div>
+          </div>
+        </div>
+        <div class="contact-item" style="border-bottom:none">
+          <div class="contact-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </div>
+          <div>
+            <div class="contact-lbl">Telegram</div>
+            <div class="contact-val"><a href="https://t.me/managershanghai" target="_blank">@managershanghai</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA panel -->
+      <div class="reveal d1">
+        <p class="contact-cta-text" data-i18n="contact_cta">
+          如您正在寻找熟悉中国供应链、能够对接俄语区市场的国际业务专才，欢迎随时与我联系，期待共创合作机会。
+        </p>
+        <div style="display:flex;flex-direction:column;gap:.7rem">
+          <a href="mailto:danil_semenyuk@mail.ru" class="btn-gold">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+            <span data-i18n="c_btn_email">发送邮件</span>
+          </a>
+          <!-- ============================================================
+               DOWNLOAD BUTTONS
+               Replace href with your actual CV filenames:
+               - Chinese CV: ./丹尼尔中文简历.pdf  OR  ./cv-chinese.pdf
+               - Russian CV: ./RUS_RESUME.pdf     OR  ./cv-russian.pdf
+          ============================================================ -->
+          <a href="./cv-chinese.pdf" download class="btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="c_btn_cv_cn">下载中文简历</span>
+          </a>
+          <a href="./cv-russian.pdf" download class="btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="c_btn_cv_ru">下载俄文简历</span>
+          </a>
+          <a href="https://t.me/managershanghai" target="_blank" class="btn-ghost">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span>Telegram: @managershanghai</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="footer-name">SEMENIUK DANIL · 丹尼尔</div>
+  <div class="footer-role" data-i18n="footer_role">国际贸易 · ВЭД · B2B 销售</div>
+  <div class="footer-email">danil_semenyuk@mail.ru</div>
+  <div style="margin-top:1.2rem;font-size:.62rem;color:rgba(255,255,255,.15);letter-spacing:.12em">
+    SHANGHAI · CHINA · 上海
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ─ Translations object (zh / ru)
+     ─ i18n apply function
+     ─ Scroll reveal (IntersectionObserver)
+     ─ Counter animation
+     ─ Language bar animation
+     ─ Mobile menu
+     ─ Back to top
+============================================================ -->
+<script>
+/* ==============================================================
+   TRANSLATIONS — Edit all UI text here
+   To add a new language: add a key block below and a nav button
+============================================================== */
+const T = {
+  zh: {
+    /* NAV */
+    nav_about:'关于我', nav_skills:'核心能力', nav_exp:'工作经历',
+    nav_achieve:'工作成果', nav_edu:'教育背景', nav_lang:'语言能力', nav_contact:'联系我',
+    /* HERO */
+    hero_eyebrow:'国际业务专家 · 上海',
+    hero_role:'国际业务开发专员 · 外贸销售 · 俄罗斯及独联体市场',
+    hero_tagline:'连接中国工厂与俄语区市场的贸易专家',
+    hero_summary:'具备国际贸易、B2B销售、供应商开发及跨境执行实战经验，熟悉中国制造业生态与俄语区客户需求，三语商务沟通，助力中国企业高效拓展海外市场。',
+    btn_cv_cn:'下载中文简历', btn_cv_ru:'下载俄文简历', btn_email:'发送邮件', btn_scroll:'查看经历',
+    hero_corridor_label:'贸易走廊 · SUPPLY CORRIDOR',
+    hm1:'月均订单', hm2:'准时交付', hm3:'中文水平',
+    scroll_hint:'向下滚动',
+    /* ABOUT */
+    about_eyebrow:'个人简介', about_title:'国际市场的实战专家',
+    about_p1:'我是一名具备国际贸易、B2B销售、采购寻源、出口协调及跨境项目执行经验的国际业务专才，深度熟悉中国制造业环境、工厂沟通模式及俄罗斯/CIS市场客户需求。毕业于华东政法大学跨境贸易与商务中文专业，具备中文、俄语、英语三语商务沟通能力。',
+    about_p2:'在华学习与工作期间，我积累了从客户沟通、供应商开发到订单推进、国际物流协调的完整外贸实战经验，能够高效协助中国企业对接俄罗斯及海外市场。熟悉工业设备、工程机械、化工原料及技术类产品，快速理解产品逻辑，推动商务沟通与项目落地。',
+    about_p3:'具备强烈责任感与执行力，适应快节奏高强度国际业务环境，可接受出差及海外拓展。致力于帮助中国制造企业开发海外客户，提升国际业务效率，建立稳定的国际合作关系。',
+    ah1_title:'三语商务沟通', ah1_sub:'中文 HSK6 · 俄语母语 · 英语 B2',
+    ah2_title:'中国供应链专家', ah2_sub:'100+ 中国制造商资源库，工业设备·机械·化工',
+    ah3_title:'俄语区市场对接', ah3_sub:'俄罗斯 · 独联体 · 国际市场 B2B 客户开发',
+    ah4_title:'端到端项目执行', ah4_sub:'3M+ RMB 采购协调 · 95%+ 准时交付',
+    /* SKILLS */
+    skills_eyebrow:'专业能力', skills_title:'核心竞争力',
+    sk1t:'外贸全流程管理', sk1s:'从询盘到出货的端到端执行',
+    sk2t:'B2B 国际销售',   sk2s:'工业设备及技术类产品销售',
+    sk3t:'供应商开发与验证',sk3s:'100+ 中国制造商数据库',
+    sk4t:'工厂谈判',       sk4s:'价格、MOQ、交期、包装协商',
+    sk5t:'出口协调',       sk5s:'报关、物流节点跟进管理',
+    sk6t:'跨境物流',       sk6s:'Incoterms 2020 · 国际运输',
+    sk7t:'客户关系管理',   sk7s:'俄罗斯、独联体及国际客户',
+    sk8t:'跨文化沟通',     sk8s:'中俄英三语业务对接',
+    sk9t:'B2B 数字营销',   sk9s:'品牌传播、内容营销、线索开发',
+    sk10t:'展会商务接待',  sk10s:'上海国际展会 · 现场洽谈',
+    sk11t:'CRM / ERP 系统',sk11s:'Alibaba B2B · Global Sources · LinkedIn',
+    sk12t:'多语言商务沟通',sk12s:'中文 · 俄语 · 英语',
+    /* EXPERIENCE */
+    exp_eyebrow:'工作经历', exp_title:'职业经历',
+    kesa_dates:'2025 — 2026', kesa_company:'Shanghai KESA',
+    kesa_role:'国际业务专员 · 外贸销售', kesa_location:'中国上海',
+    kesa_b1:'负责国际订单端到端管理，跟进从询盘、报价、下单到生产、物流及最终出货的全流程，确保客户、工厂与物流端信息准确衔接，ежемесячно сопровождал 25–30 активных заказов。',
+    kesa_b2:'对潜在客户进行需求分析与资格筛选，重点梳理技术参数、交期、预算及贸易条款（Incoterms 2020），提升商务推进效率，缩短决策周期。',
+    kesa_b3:'与中国工厂及供应商进行采购谈判，就价格、交期、MOQ（最小起订量）、包装及技术规格进行高效沟通，争取客户最优商务条件。',
+    kesa_b4:'开展供应商寻源（Sourcing），对比多家制造商的技术能力、商务条件与交付能力，协助客户锁定最优方案，建立并维护 100+ 供应商数据库。',
+    kesa_b5:'协调出口报关及跨境物流节点，确保 95%+ 的订单按计划准时交付，有效降低交期风险。',
+    kesa_b6:'担任俄罗斯/CIS客户与中国制造商之间的沟通桥梁，以中俄英三语高效对接，减少跨文化误差，加速项目推进。',
+    kesa_b7:'参与上海国际展会的商务接待、现场翻译、客户洽谈及会后线索跟进，累计对接潜在客户 100+。',
+    kesa_b8:'熟练运用 Alibaba International、Made-in-China、Global Sources、LinkedIn 及 CRM/ERP 系统进行供应商开发与客户管理。',
+    kesa_case_label:'项目案例 · 供应链切换',
+    kesa_case_text:'某俄罗斯工业客户因原供应商无法确认生产周期，项目交期面临重大风险。我主导协调了供应链切换工作，快速筛选多家中国工厂，对比技术参数与商务条件，协调物流与出口流程，最终帮助客户在短时间内完成方案调整，成功保住订单，稳定客户关系，提升客户对中国供应链的信任度。',
+    comp_dates:'2023 — 2025',
+    comp_company:'俄罗斯大型工业材料公司 · Composite Group',
+    comp_role:'SMM 经理 · 市场营销专员', comp_location:'俄罗斯',
+    comp_b1:'负责工业材料行业 B2B 市场推广与客户开发支持，通过数字营销、品牌传播及内容运营助力销售团队拓展目标市场，覆盖俄罗斯、独联体及欧美市场潜在客户 5000+ 人次。',
+    comp_b2:'策划并执行线上推广活动，推动企业官网及数字渠道月均访问量提升 35%，品牌内容累计曝光量突破 10 万+ 次。',
+    comp_b3:'输出产品介绍、营销资料及商务沟通内容，完成 50+ 份产品资料及推广内容制作，为销售团队提供市场开发支持。',
+    comp_b4:'参与国际市场品牌传播，协助企业参加 10+ 场线上线下行业推广活动，增强企业在目标行业及区域市场的专业影响力。',
+    comp_b5:'通过数字渠道获取并培育潜在客户线索，累计获取有效销售线索 200+ 条，其中 30+ 条进入商务洽谈阶段。',
+    /* ACHIEVEMENTS */
+    achieve_eyebrow:'工作成果', achieve_title:'用数字说话',
+    achieve_sub:'真实业绩 · 量化结果 · 商业价值',
+    st1:'月均独立跟进国际订单', st2:'月均处理国际客户询盘', st3:'评估开发中国供应商',
+    st4:'协调跨境采购金额（RMB）', st4suf:'万+', st5:'订单准时交付率',
+    st6:'中国制造商资源库', st7:'覆盖国际潜在客户人次', st8:'有效销售线索',
+    st9:'品牌内容累计曝光量', st10:'网站月均访问量增长',
+    /* EDUCATION */
+    edu_eyebrow:'教育背景', edu_title:'学术背景',
+    edu_degree:'学士学位', edu_uni:'华东政法大学',
+    edu_uni_en:'East China University of Political Science and Law',
+    edu_location:'中国上海', edu_dates:'2020 — 2025',
+    edu_major:'专业：跨境贸易与商务中文',
+    edu_courses_label:'附加培训 · 进修课程',
+    edu_c1:'物流管理专项课程', edu_c2:'国际贸易与供应链管理',
+    edu_c3:'高级商务汉语',     edu_c4:'跨文化商务沟通',
+    edu_graduated:'2025届毕业生', edu_shanghai:'SHANGHAI · 上海',
+    /* LANGUAGES */
+    lang_eyebrow:'语言能力', lang_title:'语言专业能力',
+    lng1_name:'俄语', lng1_lvl:'母语', lng1_desc:'Native speaker · Родной язык',
+    lng2_name:'中文', lng2_lvl:'HSK 6', lng2_desc:'商务汉语流利 · Business Fluent',
+    lng3_name:'English', lng3_lvl:'B2', lng3_desc:'商务英语熟练 · Business Proficient',
+    lng4_name:'한국어', lng4_lvl:'A2', lng4_desc:'基础沟通 · Basic',
+    /* CONTACT */
+    contact_eyebrow:'取得联系', contact_title:'欢迎联系合作',
+    contact_sub:'对接中国工厂 · 拓展俄语区市场 · 驱动国际业务增长',
+    contact_cta:'如您正在寻找熟悉中国供应链、能够对接俄语区市场的国际业务专才，欢迎随时与我联系，期待共创合作机会。',
+    c_phone_lbl:'联系电话', c_email_lbl:'电子邮件', c_loc_lbl:'所在城市', c_loc_val:'中国 · 上海',
+    c_btn_email:'发送邮件', c_btn_cv_cn:'下载中文简历', c_btn_cv_ru:'下载俄文简历',
+    footer_role:'国际贸易 · ВЭД · B2B 销售',
+  },
+
+  ru: {
+    /* NAV */
+    nav_about:'Обо мне', nav_skills:'Компетенции', nav_exp:'Опыт работы',
+    nav_achieve:'Результаты', nav_edu:'Образование', nav_lang:'Языки', nav_contact:'Контакты',
+    /* HERO */
+    hero_eyebrow:'Международный специалист · Шанхай',
+    hero_role:'ВЭД · Международные продажи · Россия и СНГ',
+    hero_tagline:'Связываю китайские фабрики с рынками России и СНГ',
+    hero_summary:'Специалист по ВЭД и международным продажам с практическим опытом в B2B-продажах, поиске поставщиков, экспортной координации и сопровождении международных проектов. Помогаю китайским компаниям эффективно выходить на русскоязычные рынки.',
+    btn_cv_cn:'Скачать китайское CV', btn_cv_ru:'Скачать русское CV',
+    btn_email:'Написать письмо', btn_scroll:'Смотреть опыт',
+    hero_corridor_label:'ТОРГОВЫЙ КОРИДОР · SUPPLY CORRIDOR',
+    hm1:'заказов/месяц', hm2:'вовремя', hm3:'китайский',
+    scroll_hint:'листайте вниз',
+    /* ABOUT */
+    about_eyebrow:'Обо мне', about_title:'Практик международной торговли',
+    about_p1:'Специалист по международным продажам и ВЭД с опытом в B2B-продажах, поиске поставщиков, экспортной координации и сопровождении международных проектов. Хорошо понимаю специфику китайского производственного рынка, особенности коммуникации с китайскими фабриками, а также потребности клиентов из России и стран СНГ.',
+    about_p2:'Работал с проектами в сферах промышленного оборудования, инженерной техники, химического сырья и технической продукции. Окончил East China University of Political Science and Law по направлению «Международная торговля и деловой китайский язык», владею русским, китайским и английским языками для делового общения.',
+    about_p3:'Быстро вникаю в логику продукта и умею доводить сделку до результата. Адаптируюсь к высоким темпам международной среды, готов к командировкам и работе на зарубежных рынках.',
+    ah1_title:'Трёхязычная коммуникация', ah1_sub:'Китайский HSK6 · Русский (родной) · Английский B2',
+    ah2_title:'Эксперт по Китаю', ah2_sub:'100+ производителей в базе — оборудование, механика, химия',
+    ah3_title:'Рынки России и СНГ', ah3_sub:'Привлечение и сопровождение B2B-клиентов из РФ и СНГ',
+    ah4_title:'Сквозное выполнение', ah4_sub:'Закупки 3M+ RMB · Своевременность 95%+',
+    /* SKILLS */
+    skills_eyebrow:'Профессиональные навыки', skills_title:'Ключевые компетенции',
+    sk1t:'ВЭД — полный цикл',     sk1s:'От запроса до отгрузки — end-to-end',
+    sk2t:'B2B международные продажи', sk2s:'Промышленное оборудование и техника',
+    sk3t:'Поиск и верификация поставщиков', sk3s:'База 100+ китайских производителей',
+    sk4t:'Переговоры с фабриками', sk4s:'Цена, MOQ, сроки, упаковка, спецификации',
+    sk5t:'Экспортная координация',  sk5s:'Таможня, экспедиторы, логистические узлы',
+    sk6t:'Международная логистика', sk6s:'Incoterms 2020 · международные перевозки',
+    sk7t:'Работа с клиентами',      sk7s:'Россия, СНГ, международные рынки',
+    sk8t:'Межкультурные коммуникации', sk8s:'RU · ZH · EN трёхязычная среда',
+    sk9t:'B2B digital-маркетинг',  sk9s:'Контент, бренд, генерация лидов',
+    sk10t:'Выставки и мероприятия',sk10s:'Шанхай · международные ярмарки',
+    sk11t:'CRM / ERP / инструменты', sk11s:'Alibaba · Global Sources · LinkedIn',
+    sk12t:'Многоязычная коммуникация', sk12s:'Русский · Китайский · Английский',
+    /* EXPERIENCE */
+    exp_eyebrow:'Опыт работы', exp_title:'Карьерный путь',
+    kesa_dates:'2025 — 2026', kesa_company:'Shanghai KESA',
+    kesa_role:'Специалист по ВЭД · Международные продажи', kesa_location:'Шанхай, Китай',
+    kesa_b1:'Управлял полным циклом международных сделок: от обработки входящих запросов и подготовки КП до запуска производства, организации логистики и финальной отгрузки. Ежемесячно сопровождал 25–30 активных заказов одновременно.',
+    kesa_b2:'Анализировал потребности клиентов из России, СНГ и зарубежных рынков: технические требования, бюджет, сроки поставки и условия по Incoterms 2020. Это позволяло ускорять принятие решений и сокращать цикл согласования сделки.',
+    kesa_b3:'Вёл коммерческие переговоры с китайскими производителями по ценообразованию, срокам производства, MOQ, упаковке и техническим характеристикам продукции, добиваясь оптимальных условий для клиентов.',
+    kesa_b4:'Разработал и поддерживал базу из 100+ китайских производителей и поставщиков промышленной продукции, подбирая оптимальных партнёров под требования конкретных проектов.',
+    kesa_b5:'Координировал экспортные поставки и международную логистику; обеспечивал своевременное исполнение обязательств по 95%+ сопровождаемых заказов.',
+    kesa_b6:'Выступал связующим звеном между российскими заказчиками и китайскими производителями, минимизируя риски недопонимания на всех этапах проекта — на русском, китайском и английском языках.',
+    kesa_b7:'Представлял компанию на международных отраслевых выставках в Шанхае: переговоры, сопровождение клиентов, обработка потенциальных контрактов.',
+    kesa_b8:'Использовал Alibaba International, Made-in-China, Global Sources, LinkedIn, CRM- и ERP-системы для поиска поставщиков, развития клиентской базы и ведения проектов.',
+    kesa_case_label:'Кейс · Смена поставщика',
+    kesa_case_text:'Российский промышленный заказчик столкнулся с риском срыва поставки: действующий поставщик не мог подтвердить сроки производства. Я взял на себя координацию смены цепочки поставок — оперативно отобрал несколько китайских фабрик, сравнил технические характеристики и коммерческие условия, согласовал логистику и экспортный процесс. Результат: заказ сохранён, клиент стабилизирован, доверие к китайской цепочке поставок повышено.',
+    comp_dates:'2023 — 2025',
+    comp_company:'Российская компания промышленных материалов · Composite Group',
+    comp_role:'SMM-менеджер · Специалист по маркетингу', comp_location:'Россия',
+    comp_b1:'Осуществлял B2B-продвижение продукции в сфере промышленных материалов и поддержку развития продаж на международных рынках. Суммарный охват потенциальных клиентов из России, СНГ, Европы и Северной Америки превысил 5 000+ контактов.',
+    comp_b2:'Планировал и реализовывал маркетинговые кампании в цифровых каналах, обеспечив рост среднемесячной посещаемости корпоративного сайта на 35%. Совокупный охват брендового контента превысил 100 000 просмотров.',
+    comp_b3:'Разрабатывал продуктовые презентации, коммерческие материалы и контент для взаимодействия с клиентами. Подготовил 50+ маркетинговых и продуктовых материалов для отдела продаж.',
+    comp_b4:'Участвовал в реализации стратегии международного продвижения бренда и организации 10+ отраслевых онлайн- и офлайн-мероприятий.',
+    comp_b5:'Сформировал 200+ квалифицированных лидов через цифровые каналы коммуникации, из которых 30+ перешли в стадию коммерческих переговоров.',
+    /* ACHIEVEMENTS */
+    achieve_eyebrow:'Результаты работы', achieve_title:'Цифры говорят сами',
+    achieve_sub:'Реальные результаты · Измеримый вклад · Деловая ценность',
+    st1:'активных заказов в месяц', st2:'запросов от клиентов в месяц',
+    st3:'поставщиков проверено и оценено',
+    st4:'координировано закупок (RMB)', st4suf:'млн+',
+    st5:'своевременное исполнение заказов',
+    st6:'производителей в базе поставщиков',
+    st7:'охваченных международных контактов',
+    st8:'квалифицированных лидов',
+    st9:'просмотров брендового контента',
+    st10:'рост посещаемости сайта в месяц',
+    /* EDUCATION */
+    edu_eyebrow:'Образование', edu_title:'Академическая база',
+    edu_degree:'Бакалавр',
+    edu_uni:'Восточно-Китайский университет политических наук и права',
+    edu_uni_en:'East China University of Political Science and Law',
+    edu_location:'Шанхай, Китай', edu_dates:'2020 — 2025',
+    edu_major:'Специализация: Международная торговля и деловой китайский язык',
+    edu_courses_label:'Дополнительное обучение',
+    edu_c1:'Логистика и управление цепями поставок',
+    edu_c2:'Международная торговля и Supply Chain Management',
+    edu_c3:'Деловой китайский язык (продвинутый уровень)',
+    edu_c4:'Межкультурные бизнес-коммуникации',
+    edu_graduated:'Выпускник 2025 года', edu_shanghai:'ШАНХАЙ · 上海',
+    /* LANGUAGES */
+    lang_eyebrow:'Языковые компетенции', lang_title:'Языковой профиль',
+    lng1_name:'Русский', lng1_lvl:'Родной',  lng1_desc:'Native speaker · Родной язык',
+    lng2_name:'中文',    lng2_lvl:'HSK 6',   lng2_desc:'Свободное деловое общение · Business Fluent',
+    lng3_name:'English', lng3_lvl:'B2',       lng3_desc:'Деловой английский · Business Proficient',
+    lng4_name:'한국어',  lng4_lvl:'A2',       lng4_desc:'Базовый уровень · Basic',
+    /* CONTACT */
+    contact_eyebrow:'Контактная информация', contact_title:'Готов к сотрудничеству',
+    contact_sub:'Работа с Китаем · Выход на рынки России и СНГ · Международные продажи',
+    contact_cta:'Если вы ищете специалиста, который понимает китайский рынок и умеет работать с русскоязычными клиентами — напишите мне. Готов к предложениям по ВЭД, международным продажам и развитию бизнеса.',
+    c_phone_lbl:'Телефон', c_email_lbl:'Email', c_loc_lbl:'Местоположение', c_loc_val:'Шанхай, Китай',
+    c_btn_email:'Написать письмо', c_btn_cv_cn:'Скачать китайское CV', c_btn_cv_ru:'Скачать русское CV',
+    footer_role:'ВЭД · Международные продажи · B2B',
+  }
+};
+
+/* ==============================================================
+   i18n — apply translations to all [data-i18n] elements
+============================================================== */
+let lang = 'zh';
+
+function applyLang(l) {
+  lang = l;
+  const d = T[l];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (d[k] !== undefined) el.textContent = d[k];
+  });
+  document.documentElement.lang = l === 'zh' ? 'zh-Hans' : 'ru';
+  document.getElementById('langToggle').textContent = l === 'zh' ? 'RU · РУС' : 'ZH · 中文';
+}
+
+function toggleLang() {
+  applyLang(lang === 'zh' ? 'ru' : 'zh');
+}
+
+/* ==============================================================
+   SCROLL REVEAL — IntersectionObserver
+============================================================== */
+const revealIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+/* ==============================================================
+   COUNTER ANIMATION — triggered once per stat card
+============================================================== */
+function countUp(el, target, duration) {
+  const start = performance.now();
+  function step(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString();
+    if (p < 1) requestAnimationFrame(step);
+    else el.textContent = target.toLocaleString();
+  }
+  requestAnimationFrame(step);
+}
+
+const statsIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.counted) {
+      e.target.dataset.counted = '1';
+      const val = e.target.querySelector('.stat-val');
+      const target = parseInt(e.target.dataset.target);
+      if (val && !isNaN(target)) countUp(val, target, 1600);
+    }
+  });
+}, { threshold: 0.25 });
+
+document.querySelectorAll('.stat-card[data-target]').forEach(el => statsIO.observe(el));
+
+/* ==============================================================
+   LANGUAGE BAR ANIMATION
+============================================================== */
+const langIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.lang-bar').forEach(bar => {
+        bar.style.width = bar.dataset.width + '%';
+      });
+      langIO.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+const ls = document.getElementById('langSection');
+if (ls) langIO.observe(ls);
+
+/* ==============================================================
+   MOBILE MENU
+============================================================== */
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+/* ==============================================================
+   BACK TO TOP
+============================================================== */
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('show', window.scrollY > 400);
+}, { passive: true });
+
+/* ==============================================================
+   INIT — start on Chinese
+============================================================== */
+applyLang('zh');
+</script>
+
+</body>
+</html>
